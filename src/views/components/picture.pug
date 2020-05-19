@@ -1,0 +1,6 @@
+mixin picture(data, lazy, className)
+	- var path = './img/' + (data.dir ? data.dir + '/' : '') + data.name + '.' + data.type;
+	if lazy
+		img.picture__img.lazyload(data-src= path, src= path, alt= data.name, class= (className ? className : ''))
+	else
+		img.picture__img(src= path, alt= data.name, class= (className ? className : ''))

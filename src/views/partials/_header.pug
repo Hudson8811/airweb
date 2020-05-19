@@ -1,0 +1,27 @@
+include ../components/container.pug
+
+mixin header(data)
+	header.header
+		+container()
+			.header__flex-wrapper
+				a.header__logo(href='/')
+					svg
+						use(xlink:href='./svg/sprite.svg#logo')
+				ul.header__menu
+					each item in data.items
+						li.header__menu-item
+							a(href='#')
+								svg
+									use(xlink:href=`./svg/sprite.svg#${item.icon}`)
+								p= item.text
+				.header__navigate
+					.header__burger
+						span
+					.header__search
+						svg
+							use(xlink:href='./svg/sprite.svg#search')
+				.header__socials
+					each item in data.socials
+						a(class=`header__socials-${item.name}` href='#')
+							svg
+								use(xlink:href=`./svg/sprite.svg#${item.name}`)

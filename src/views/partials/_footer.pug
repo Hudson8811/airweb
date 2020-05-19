@@ -1,0 +1,26 @@
+include ../components/container.pug
+
+mixin footer(data)
+	footer.footer
+		+container('footer__container')
+			.footer__col
+				.footer__logo
+					svg
+						use(xlink:href='./svg/sprite.svg#logo')
+				.footer__socials
+					each item in data.socials
+						a(class=`footer__socials-${item.name}` href='#')
+							svg
+								use(xlink:href=`./svg/sprite.svg#${item.name}`)
+			nav.footer__col
+				each link in data.links
+					li
+						a.footer__link(href=link.href)= link.text
+			.footer__col
+				form.footer__form(action='/', method='POST')
+					label.footer__form-title(for=data.form.id)= data.form.title
+					.footer__fields
+						input(type='email', placeholher=data.form.placeholher, id=data.form.id, name=data.form.name)
+						input.footer__submit.footer__submit--big(type='submit' value=data.form.submit.big)
+						input.footer__submit.footer__submit--small(type='submit' value=data.form.submit.small)
+					.footer__copyrights= data.form.copyrights
