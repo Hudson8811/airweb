@@ -1,0 +1,47 @@
+{
+	"links": [
+		{
+			"href": "#",
+			"text": "Услуги и цены"
+		},
+		{
+			"href": "#",
+			"text": "Кейсы"
+		},
+		{
+			"href": "#",
+			"text": "Акции"
+		},
+		{
+			"href": "#",
+			"text": "О компании"
+		},
+		{
+			"href": "#",
+			"text": "Блог"
+		},
+		{
+			"href": "#",
+			"text": "Контакты"
+		}
+	],
+	"contacts": [
+		{
+			"icon": "mail",
+			"url": "mailto:info@agency-air.ru",
+			"text": "info@agency-air.ru"
+		},
+		{
+			"icon": "phone",
+			"url": "tel:+74952150365",
+			"text": "8 (495) 215-03-65"
+		}
+	],
+	"button": {
+		"text": "Заказать звонок"
+	},
+	"send": {
+		"href": "#",
+		"text": "Отправить письмо"
+	}
+}

@@ -1,3 +1,80 @@
 .header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background-color: $light-gray;
+	z-index: 10;
 
+	&__outer-wrapper {
+		display: flex;
+		align-items: center;
+		padding: 11px 34px 19px 22px;
+	}
+
+	&__logo svg {
+		width: 184px;
+		height: 70px;
+	}
+
+	&__menu-list {
+		display: flex;
+	}
+
+	&__menu-link {
+		a {
+			transition: color .3s ease;
+
+			&:hover {
+				color: $red;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 42px;
+		}
+	}
+
+	&__contacts,
+	&__contact-link {
+		display: flex;
+		align-items: center;
+	}
+
+	&__contact-link {
+		margin-right: 34px;
+		transition: color .3s ease;
+
+		&:nth-child(2) {
+			font-size: 18px;
+		}
+
+		&:hover {
+			color: $red;
+		}
+
+		svg {
+			width: 18px;
+			height: 14px;
+			margin-right: 10px;
+		}
+	}
+
+	&__buttons {
+		text-align: center;
+
+		a {
+			color: $red;
+			border-bottom: 1px solid $red;
+			transition: border-bottom-color .2s ease;
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	&__callme {
+		margin-bottom: 7px;
+	}
 }

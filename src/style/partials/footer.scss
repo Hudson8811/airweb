@@ -1,3 +1,131 @@
 .footer {
+	flex: 0 0 auto;
+	background-color: $dark-gray;
 
+	&__container {
+		padding-top: 61px;
+	}
+
+	&__top {
+		display: flex;
+	}
+
+	&__column {
+		max-width: 255px;
+		margin-right: 74px;
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 30px;
+
+		svg {
+			width: 184px;
+			height: 70px;
+		}
+	}
+
+	&__contact-link {
+		display: flex;
+		font-size: 15px;
+		color: $gray;
+
+		&:not(:last-of-type) {
+			margin-bottom: 20px;
+		}
+
+		&:nth-child(1) {
+			line-height: 24px;
+		}
+
+		svg {
+			width: 18px;
+			height: 14px;
+			margin-right: 13px;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		margin-top: 29px;
+	}
+
+	&__socials-icon {
+		margin-right: 18px;
+
+		svg {
+			width: 39px;
+			height: 39px;
+		}
+	}
+
+	&__column-menu {
+		margin-right: 84px;
+
+		&:last-child {
+			.footer__menu:not(:first-child) {
+				margin-bottom: 16px;
+			}
+		}
+	}
+
+	&__menu {
+		margin-bottom: 42px;
+	}
+
+	&__menu-title {
+		font-size: 20px;
+		line-height: 22px;
+		color: $white;
+	}
+
+	&__menu-list {
+		display: flex;
+		flex-direction: column;
+		margin-top: 24px;
+	}
+
+	&__menu-link {
+		&:not(:last-of-type) {
+			margin-bottom: 16px;
+		}
+
+		a {
+			color: $gray;
+			border-bottom: 1px solid $gray;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		justify-content: space-between;
+		font-size: 15px;
+		line-height: 32px;
+		color: $gray;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 1px;
+			background-color: $gray;
+		}
+	}
+
+	&__copyrights {
+		padding: 25px 0 31px;
+		text-transform: uppercase;
+
+		span {
+			margin-right: 50px;
+		}
+	}
+
+	&__privacy-policy {
+		padding: 25px 0 31px;
+		color: $gray;
+		text-decoration: underline;
+	}
 }
