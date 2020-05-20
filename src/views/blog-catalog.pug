@@ -1,0 +1,9 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+
+block vars
+
+block main
+	+feedback()
+	+map()

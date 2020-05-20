@@ -56,7 +56,7 @@ var path = {
 var config = {
 	server: {
 		baseDir: "./build",
-		index: "index.html"
+		index: "blog-catalog.html"
 	},
 	//tunnel: true,
 	host: 'localhost',
