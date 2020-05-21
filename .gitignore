@@ -106,3 +106,5 @@ dist
 .history
 .idea
 node_modules
+build
+src/data/combined.json

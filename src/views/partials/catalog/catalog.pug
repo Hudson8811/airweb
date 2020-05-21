@@ -1,0 +1,10 @@
+include article.pug
+include ../../components/container.pug
+include ../../components/button.pug
+
+mixin catalog(data)
+	.catalog
+		+container('catalog__container')
+			each article in data.articles
+				+article(article)
+			+button(data.button, 'button--arrow catalog__button')

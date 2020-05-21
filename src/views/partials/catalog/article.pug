@@ -1,0 +1,12 @@
+include ../../components/button.pug
+
+mixin article(data)
+	.article
+		.article__wrapper
+			.article__tags= data.tag
+			.article__title= data.title
+			if data.desc
+				.article__desc= data.desc
+			.article__more
+				+button(data.button, 'button--arrow article__button')
+				.article__date= data.date

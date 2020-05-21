@@ -1,0 +1,147 @@
+.article {
+	position: relative;
+	padding: 61px 49px 55px;
+
+	&:nth-child(5n-4) {
+		width: 58%;
+		margin-right: 25px;
+		background-color: $black-23;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 60%;
+			height: 100%;
+			background: url("../img/article-1.png") center no-repeat;
+			background-size: cover;
+			pointer-events: none;
+		}
+	}
+
+	&:nth-child(5n-3) {
+		width: 24%;
+		background-color: $gray-40;
+
+		.article {
+			&__more {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	&:nth-child(5n-2) {
+		width: 100%;
+		margin: 25px 0;
+		background-color: $gray-40;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 80%;
+			height: 100%;
+			background: url("../img/article-2.png") center no-repeat;
+			background-size: cover;
+			pointer-events: none;
+		}
+
+		.article {
+			&__desc {
+				max-width: 1015px;
+			}
+		}
+	}
+
+	&:nth-child(5n-1) {
+		width: 24%;
+		margin-right: 25px;
+		margin-bottom: 25px;
+		background-color: $blue;
+
+		.article {
+			&__more {
+				margin-top: 80px;
+			}
+		}
+	}
+
+	&:nth-child(5n) {
+		width: 58%;
+		margin-bottom: 25px;
+		background-color: $gray-e2;
+
+		&::before {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 80%;
+			height: 100%;
+			background: url("../img/article-3.png") center no-repeat;
+			background-size: cover;
+			pointer-events: none;
+		}
+
+		.article {
+			&__tags,
+			&__date {
+				color: $gray-tag-dark;
+			}
+
+			&__title,
+			&__desc {
+				color: $light-black;
+				max-width: 585px;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__tags {
+		font-size: 14px;
+		line-height: 22px;
+		color: $gray-tag-light;
+	}
+
+	&__title {
+		font-size: 24px;
+		color: $gray-fe;
+		margin: 13px 0 22px;
+		text-transform: uppercase;
+	}
+
+	&__desc {
+		font-size: 15px;
+		line-height: 26px;
+		color: $white;
+		margin-bottom: 35px;
+	}
+
+	&__more {
+		display: flex;
+		align-items: center;
+	}
+
+	&__date {
+		font-size: 14px;
+		line-height: 22px;
+		color: $gray-tag-light;
+		margin-left: 20px;
+	}
+
+	&:nth-child(1) {
+		.article__desc {
+			max-width: 470px;
+		}
+	}
+}

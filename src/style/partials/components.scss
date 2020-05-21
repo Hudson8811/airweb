@@ -15,4 +15,36 @@
 	border-radius: 5px;
 	background-color: $red;
 	cursor: pointer;
+	position: relative;
+
+	&--arrow {
+		padding: 10px 41px 9px 23px;
+		box-shadow: 0 6px 10px rgba(221, 32, 54, 0.2);
+
+		span {
+			position: relative;
+			display: block;
+
+			&::before,
+			&::after {
+				content: '';
+				display: block;
+				width: 8px;
+				height: 2px;
+				background-color: $white;
+				position: absolute;
+				right: -16px;
+			}
+
+			&::before {
+				top: 68%;
+				transform: translate(0, -68%) rotate(-45deg);
+			}
+
+			&::after {
+				top: 44%;
+				transform: translate(0, -44%) rotate(45deg);
+			}
+		}
+	}
 }
