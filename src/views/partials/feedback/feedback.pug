@@ -1,2 +1,11 @@
+include ../../components/container.pug
+include form.pug
+
 mixin feedback(data)
 	.feedback
+		+container('feedback__container')
+			+form(data.form, 'feedback__form')
+			.feedback__info
+				.feedback__title= data.info.title
+				.feedback__desc!= data.info.desc
+				.feedback__privacy= data.info.privacy

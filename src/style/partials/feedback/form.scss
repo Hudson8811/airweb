@@ -1,0 +1,50 @@
+.form {
+	padding: 57px 113px 41px;
+	color: $white;
+	border: 1px solid $light-gray;
+	border-radius: 5px;
+	background-color: rgba(#16171c, 0.5);
+
+	&__title {
+		font-size: 30px;
+		text-transform: uppercase;
+	}
+
+	&__subtitle {
+		font-size: 20px;
+		line-height: 28px;
+		margin: 20px 0 7px;
+	}
+
+	&__select {
+		width: 100%;
+		margin-top: 24px;
+		font-family: $gilroy;
+		font-size: 16px;
+		color: $gray-tag-dark;
+		background-color: $light-gray;
+
+		ul {
+			width: 100%;
+		}
+	}
+
+	input {
+		margin-top: 24px;
+	}
+
+	&__button {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-family: $gilroy;
+		font-size: 18px;
+		color: $white;
+		padding: 14px 57px 14px 53px;
+		border-radius: 5px;
+		background-color: $red;
+		cursor: pointer;
+		position: relative;
+		margin: 0 auto;
+	}
+}

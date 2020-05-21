@@ -1,4 +1,7 @@
 .catalog {
+	position: relative;
+	z-index: 3;
+
 	&__container {
 		display: flex;
 		flex-wrap: wrap;

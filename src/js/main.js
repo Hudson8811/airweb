@@ -3,8 +3,11 @@
 //= libs/jquery-3.3.1.min.js
 //= libs/jquery.fancybox.min.js
 //= libs/slick.min.js
+//= libs/jquery.nice-select.min.js
+//= libs/jquery.mask.min.js
 
 /* my scripts */
 
 //= partials/components.js
 //= partials/header.js
+//= partials/form.js
