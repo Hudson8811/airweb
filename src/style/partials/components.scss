@@ -55,11 +55,58 @@
 	border-radius: 5px;
 	padding: 13px 16px;
 
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&::-moz-placeholder {
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&:-moz-placeholder {
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&:-ms-input-placeholder {
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
 	&::placeholder {
 		font-family: $gilroy;
 		font-size: 16px;
 		font-weight: 300;
 		color: $gray-tag-dark;
+		opacity: 1;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus::-webkit-input-placeholder {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus::-moz-placeholder {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus:-moz-placeholder {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus:-ms-input-placeholder {
+		opacity: 0;
+		transition: opacity 0.3s ease;
+	}
+
+	&:focus::placeholder {
+		opacity: 0;
+		transition: opacity 0.3s ease;
 	}
 }
 

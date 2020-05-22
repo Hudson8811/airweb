@@ -1,4 +1,4 @@
-mixin picture(data, lazy, className)
+mixin picture(data, className, lazy)
 	- var path = './img/' + (data.dir ? data.dir + '/' : '') + data.name + '.' + data.type;
 	if lazy
 		img.picture__img.lazyload(data-src= path, src= path, alt= data.name, class= (className ? className : ''))

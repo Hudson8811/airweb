@@ -1,7 +1,10 @@
 include ../../components/button.pug
+include ../../components/picture.pug
 
 mixin article(data)
 	.article
+		if data.img
+			+picture(data.img, 'article__img')
 		.article__wrapper
 			.article__tags= data.tag
 			.article__title= data.title
