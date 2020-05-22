@@ -1,0 +1,33 @@
+.title {
+	&__text {
+		font-size: 36px;
+		color: $light-black;
+		text-transform: uppercase;
+		font-weight: 400;
+		margin: 31px 0;
+	}
+
+	&__tags {
+		display: flex;
+	}
+
+	&__tag {
+		font-size: 15px;
+		padding: 5px 13px;
+		color: $light-black;
+		background-color: $white;
+		border: 1px solid #cecfd9;
+		height: auto;
+		margin-bottom: 50px;
+
+		&:not(:last-child) {
+			margin-right: 9px;
+		}
+
+		&--active {
+			color: $white;
+			background-color: $red;
+			border: none;
+		}
+	}
+}

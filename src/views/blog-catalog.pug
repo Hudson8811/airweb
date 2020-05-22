@@ -2,10 +2,12 @@ extends layouts/default.pug
 include partials/map.pug
 include partials/feedback/feedback.pug
 include partials/catalog/catalog.pug
+include partials/title.pug
 
 block vars
 
 block main
+	+title(blogCatalog.title)
 	+catalog(blogCatalog.catalog)
 	+feedback(blogCatalog.feedback)
 	+map()

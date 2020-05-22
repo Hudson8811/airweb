@@ -1,6 +1,6 @@
 .article {
 	position: relative;
-	padding: 61px 49px 55px;
+	padding: 55px 49px 51px;
 
 	&:nth-child(5n-4) {
 		width: 58%;
@@ -22,12 +22,12 @@
 	}
 
 	&:nth-child(5n-3) {
-		width: 24%;
+		width: 24.4%;
 		background-color: $gray-40;
 
 		.article {
 			&__more {
-				margin-top: 80px;
+				margin-top: 92px;
 			}
 		}
 	}
@@ -54,11 +54,15 @@
 			&__desc {
 				max-width: 1015px;
 			}
+
+			&__title {
+				margin: 6px 0 9px;
+			}
 		}
 	}
 
 	&:nth-child(5n-1) {
-		width: 24%;
+		width: 24.4%;
 		margin-right: 25px;
 		margin-bottom: 25px;
 		background-color: $blue;
@@ -99,6 +103,10 @@
 				color: $light-black;
 				max-width: 585px;
 			}
+
+			&__title {
+				margin: 6px 0 13px;
+			}
 		}
 	}
 
@@ -116,7 +124,7 @@
 	&__title {
 		font-size: 24px;
 		color: $gray-fe;
-		margin: 13px 0 22px;
+		margin: 6px 0 39px;
 		text-transform: uppercase;
 	}
 

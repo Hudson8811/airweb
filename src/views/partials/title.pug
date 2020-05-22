@@ -1,0 +1,15 @@
+include ../components/container.pug
+include ../components/breadcrumbs.pug
+include ../components/button.pug
+
+mixin title(data)
+	.title
+		+container()
+			+breadcrumbs(data.breadcrumbs)
+			.title__text= data.text
+			.title__tags
+				each tag, i in data.tags
+					if i === 0
+						+button(tag, 'title__tag title__tag--active')
+					else
+						+button(tag, 'title__tag')
