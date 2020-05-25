@@ -21,4 +21,15 @@ mixin header(data)
 				.header__buttons
 					+button(data.button, 'header__callme')
 					a(href=data.send.href)= data.send.text
+		.header__mobile
+			a.header__logo(href='/')
+				svg
+					use(xlink:href='./svg/sprite.svg#logo-mobile')
+			.header__buttons-mobile
+				each contact in data.contacts
+					a.header__contact-link(href=contact.url)
+						svg
+							use(xlink:href=`./svg/sprite.svg#${contact.icon}`)
+				.header__hamburger
+					span
 

@@ -1,11 +1,28 @@
 .article {
 	position: relative;
-	padding: 55px 47px 56px;
+	padding: 30px 25px;
+	overflow: hidden;
+
+	&:not(:last-child) {
+		margin-bottom: 10px;
+
+		@media (min-width: $dMin) {
+			margin-bottom: 0;
+		}
+	}
+
+	@media (min-width: $dMin) {
+		padding: 55px 47px 56px;
+	}
 
 	&:nth-child(5n-4) {
-		width: 58.3%;
-		margin-right: 25px;
+		width: 100%;
 		background-color: $black-23;
+
+		@media (min-width: $dMin) {
+			width: 58.3%;
+			margin-right: 25px;
+		}
 
 		.article {
 			&__desc {
@@ -15,20 +32,29 @@
 	}
 
 	&:nth-child(5n-3) {
-		width: 24.4%;
+		width: 100%;
 		background-color: $gray-40;
+
+		@media (min-width: $dMin) {
+			width: 24.4%;
+		}
 
 		.article {
 			&__title {
-				margin-top: -18px;
+				@media (min-width: $dMin) {
+					margin-top: -18px;
+				}
 			}
 		}
 	}
 
 	&:nth-child(5n-2) {
 		width: 100%;
-		margin: 25px 0;
 		background-color: $gray-40;
+
+		@media (min-width: $dMin) {
+			margin: 25px 0;
+		}
 
 		.article {
 			&__desc {
@@ -42,23 +68,34 @@
 	}
 
 	&:nth-child(5n-1) {
-		width: 24.4%;
-		margin-right: 25px;
-		margin-bottom: 25px;
+		width: 100%;
 		background-color: $blue;
+
+		@media (min-width: $dMin) {
+			width: 24.4%;
+			margin-bottom: 25px;
+			margin-right: 25px;
+		}
 
 		.article {
 			&__title {
 				max-width: 290px;
-				margin-top: -18px;
+
+				@media (min-width: $dMin) {
+					margin-top: -18px;
+				}
 			}
 		}
 	}
 
 	&:nth-child(5n) {
-		width: 58.3%;
-		margin-bottom: 25px;
+		width: 100%;
 		background-color: $gray-e2;
+
+		@media (min-width: $dMin) {
+			width: 58.3%;
+			margin-bottom: 25px;
+		}
 
 		.article {
 			&__tags,

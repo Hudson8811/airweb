@@ -7,18 +7,30 @@
 	z-index: 10;
 
 	&__outer-wrapper {
+		display: none;
 		padding: 39px;
 		position: relative;
+		
+		@media (min-width: $dMin) {
+			display: block;
+		}
 	}
 
 	&__logo {
-		position: absolute;
-		top: 11px;
-		left: 22px;
+		@media (min-width: $dMin) {
+			position: absolute;
+			top: 11px;
+			left: 22px;
+		}
 
 		svg {
-			width: 184px;
-			height: 70px;
+			width: 117px;
+			height: 35px;
+
+			@media (min-width: $dMin) {
+				width: 184px;
+				height: 70px;
+			}
 		}
 	}
 
@@ -44,19 +56,38 @@
 	&__contact-link {
 		display: flex;
 		align-items: center;
-		position: absolute;
-		top: 20px;
-		right: 34px;
+		
+		@media (min-width: $dMin) {
+			position: absolute;
+			top: 20px;
+			right: 34px;
+		}
 	}
 
 	&__contact-link {
-		width: 100%;
-		right: 415px;
+		display: flex;
+		justify-content: center;
+		width: 35px;
+		height: 35px;
+		background-color: $red;
+		border-radius: 5px;
+		margin-left: 7px;
 		transition: color .3s ease;
 
+		@media (min-width: $dMin) {
+			width: 100%;
+			height: auto;
+			right: 415px;
+			background-color: $light-gray;
+			margin-left: 0;
+			transition: color .3s ease;
+		}
+
 		&:nth-child(2) {
-			font-size: 18px;
-			right: 217px;
+			@media (min-width: $dMin) {
+				font-size: 18px;
+				right: 217px;
+			}
 		}
 
 		&:hover {
@@ -66,7 +97,10 @@
 		svg {
 			width: 18px;
 			height: 14px;
-			margin-right: 10px;
+
+			@media (min-width: $dMin) {
+				margin-right: 10px;
+			}
 		}
 	}
 
@@ -86,5 +120,58 @@
 
 	&__callme {
 		margin-bottom: 7px;
+	}
+
+	&__mobile {
+		display: flex;
+		justify-content: space-between;
+		padding: 16px;
+
+		@media (min-width: $dMin) {
+			display: none;
+		}
+	}
+
+	&__buttons-mobile {
+		display: flex;
+		align-items: center;
+	}
+
+	&__hamburger {
+		position: relative;
+		display: inline-block;
+		min-width: 30px;
+		height: 20px;
+		margin-left: 25px;
+
+		span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-right: -50%;
+			transform: translate(-50%, -50%);
+			width: 30px;
+			height: 3px;
+			background-color: $red;
+		}
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			width: 100%;
+			height: 3px;
+			background-color: $red;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
 	}
 }

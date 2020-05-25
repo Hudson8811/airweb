@@ -1,9 +1,13 @@
 .form {
-	padding: 48px 113px 41px;
+	padding: 32px;
 	color: $white;
 	border: 1px solid $light-gray;
 	border-radius: 5px;
 	background-color: rgba(#16171c, 0.5);
+
+	@media (min-width: $tMin) {
+		padding: 48px 113px 41px;
+	}
 
 	&__title {
 		font-size: 30px;

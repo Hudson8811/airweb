@@ -10,4 +10,5 @@
 
 //= partials/components.js
 //= partials/header.js
+//= partials/footer.js
 //= partials/form.js
