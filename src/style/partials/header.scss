@@ -7,14 +7,19 @@
 	z-index: 10;
 
 	&__outer-wrapper {
-		display: flex;
-		align-items: center;
-		padding: 11px 34px 19px 22px;
+		padding: 39px;
+		position: relative;
 	}
 
-	&__logo svg {
-		width: 184px;
-		height: 70px;
+	&__logo {
+		position: absolute;
+		top: 11px;
+		left: 22px;
+
+		svg {
+			width: 184px;
+			height: 70px;
+		}
 	}
 
 	&__menu-list {
@@ -39,14 +44,19 @@
 	&__contact-link {
 		display: flex;
 		align-items: center;
+		position: absolute;
+		top: 20px;
+		right: 34px;
 	}
 
 	&__contact-link {
-		margin-right: 34px;
+		width: 100%;
+		right: 415px;
 		transition: color .3s ease;
 
 		&:nth-child(2) {
 			font-size: 18px;
+			right: 217px;
 		}
 
 		&:hover {
