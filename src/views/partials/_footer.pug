@@ -10,14 +10,13 @@ mixin footer(data)
 							use(xlink:href='./svg/sprite.svg#logo-2')
 					each contact in data.contacts
 						a.footer__contact-link(href=contact.url)
-							svg
-								use(xlink:href=`./svg/sprite.svg#${contact.icon}`)
+							.footer__icon-wrapper
+								img(src=`./img/icons/${contact.icon}-mobile.png`)
 							p= contact.text
 					.footer__socials
 						each social in data.socials
 							a.footer__socials-icon(href='#')
-								svg
-									use(xlink:href=`./svg/sprite.svg#${social}`)
+								img(src=`./img/icons/${social}.png`)
 				.footer__column-menu-wrapper
 					each column, index in data.columns
 						.footer__column-menu(class=(index === 0 ? '' : 'footer__column-menu--hide'))

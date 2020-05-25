@@ -6,30 +6,51 @@
 	background-color: $light-gray;
 	z-index: 10;
 
-	&__outer-wrapper {
+	&__container {
 		display: none;
-		padding: 39px;
-		position: relative;
-		
-		@media (min-width: $dMin) {
+
+		@media (min-width: $d1280) {
 			display: block;
 		}
 	}
 
+	&__outer-wrapper {
+		display: flex;
+		justify-content: space-between;
+		padding: 18px;
+		position: relative;
+
+		@media (min-width: $d1280) {
+			display: block;
+			padding: 39px;
+		}
+	}
+
 	&__logo {
-		@media (min-width: $dMin) {
+		@media (min-width: $d1280) {
 			position: absolute;
 			top: 11px;
 			left: 22px;
 		}
 
 		svg {
-			width: 117px;
-			height: 35px;
+			&:first-child {
+				display: none;
 
-			@media (min-width: $dMin) {
-				width: 184px;
-				height: 70px;
+				@media (min-width: $d1280) {
+					display: block;
+					width: 184px;
+					height: 70px;
+				}
+			}
+
+			&:last-child {
+				width: 117px;
+				height: 35px;
+
+				@media (min-width: $d1280) {
+					display: none;
+				}
 			}
 		}
 	}
@@ -57,7 +78,7 @@
 		display: flex;
 		align-items: center;
 		
-		@media (min-width: $dMin) {
+		@media (min-width: $d1280) {
 			position: absolute;
 			top: 20px;
 			right: 34px;
@@ -74,7 +95,7 @@
 		margin-left: 7px;
 		transition: color .3s ease;
 
-		@media (min-width: $dMin) {
+		@media (min-width: $d1280) {
 			width: 100%;
 			height: auto;
 			right: 415px;
@@ -84,7 +105,7 @@
 		}
 
 		&:nth-child(2) {
-			@media (min-width: $dMin) {
+			@media (min-width: $d1280) {
 				font-size: 18px;
 				right: 217px;
 			}
@@ -94,18 +115,28 @@
 			color: $red;
 		}
 
-		svg {
-			width: 18px;
-			height: 14px;
+		picture {
+			@media (min-width: $d1280) {
+				margin-right: 11px;
+			}
+		}
 
-			@media (min-width: $dMin) {
-				margin-right: 10px;
+		p {
+			display: none;
+
+			@media (min-width: $d1280) {
+				display: block;
 			}
 		}
 	}
 
 	&__buttons {
+		display: none;
 		text-align: center;
+
+		@media (min-width: $d1280) {
+			display: block;
+		}
 
 		a {
 			color: $red;
@@ -122,27 +153,17 @@
 		margin-bottom: 7px;
 	}
 
-	&__mobile {
-		display: flex;
-		justify-content: space-between;
-		padding: 16px;
-
-		@media (min-width: $dMin) {
-			display: none;
-		}
-	}
-
-	&__buttons-mobile {
-		display: flex;
-		align-items: center;
-	}
-
 	&__hamburger {
 		position: relative;
 		display: inline-block;
 		min-width: 30px;
 		height: 20px;
 		margin-left: 25px;
+		cursor: pointer;
+
+		@media (min-width: $d1280) {
+			display: none;
+		}
 
 		span {
 			display: block;
@@ -174,4 +195,8 @@
 			bottom: 0;
 		}
 	}
+}
+
+.header-mobile-nav {
+	display: none;
 }

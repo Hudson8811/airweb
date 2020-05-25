@@ -9,6 +9,10 @@
 	&__top {
 		display: flex;
 		flex-wrap: wrap;
+
+		@media (min-width: $dMin) {
+			justify-content: space-between;
+		}
 	}
 
 	&__column {
@@ -17,9 +21,13 @@
 		margin-top: 87px;
 
 		@media (min-width: $dMin) {
-			margin-right: 65px;
+			margin-right: 5px;
 			margin-top: 0;
 			order: 0;
+		}
+
+		@media (min-width: $d1280) {
+			margin-right: 65px;
 		}
 	}
 
@@ -45,12 +53,11 @@
 		&:nth-child(1) {
 			line-height: 24px;
 		}
+	}
 
-		svg {
-			width: 18px;
-			height: 14px;
-			margin-right: 13px;
-		}
+	&__icon-wrapper {
+		min-width: 15px;
+		margin-right: 13px;
 	}
 
 	&__socials {
@@ -60,11 +67,6 @@
 
 	&__socials-icon {
 		margin-right: 18px;
-
-		svg {
-			width: 39px;
-			height: 39px;
-		}
 	}
 
 	&__column-menu-wrapper {
@@ -74,9 +76,15 @@
 		position: relative;
 		width: 100%;
 
+		@media (min-width: $tMin) {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
 		@media (min-width: $dMin) {
 			width: auto;
 			flex-direction: row;
+			justify-content: flex-start;
 		}
 
 		&::after {
@@ -88,21 +96,31 @@
 			bottom: -47px;
 			left: 0;
 
-			@media (min-width: $dMin) {
+			@media (min-width: $tMin) {
 				display: none;
 			}
 		}
 	}
 
 	&__column-menu {
+		margin-right: 0;
+
+		@media (min-width: $tMin) {
+			margin-right: 20px;
+		}
+
 		@media (min-width: $dMin) {
+			margin-right: 14px;
+		}
+
+		@media (min-width: $d1280) {
 			margin-right: 68px;
 		}
 
 		&:not(:first-child) {
 			display: none;
 
-			@media (min-width: $dMin) {
+			@media (min-width: $tMin) {
 				display: block;
 			}
 		}
@@ -153,7 +171,7 @@
 		z-index: 1;
 		cursor: pointer;
 
-		@media (min-width: $dMin) {
+		@media (min-width: $tMin) {
 			display: none;
 		}
 	}
@@ -163,6 +181,7 @@
 		width: 100%;
 		height: 100%;
 		transition: transform 0.3s ease;
+		position: relative;
 
 		&::before,
 		&::after {
@@ -187,6 +206,8 @@
 
 		&--rotate {
 			transform: rotate(180deg);
+			bottom: 5px;
+			top: auto;
 		}
 	}
 

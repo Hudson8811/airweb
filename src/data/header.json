@@ -43,5 +43,6 @@
 	"send": {
 		"href": "#",
 		"text": "Отправить письмо"
-	}
+	},
+	"socials": ["vk", "instagram", "fb"]
 }

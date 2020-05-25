@@ -46,7 +46,8 @@ $(document).ready(function () {
 	
 });
 $(document).ready(function () {
-
+	$('.header__hamburger').click(function () {
+	})
 });
 $(document).ready(function () {
 	$('.footer__expand').click(function () {

@@ -7,7 +7,9 @@ mixin header(data)
 			a.header__logo(href='/')
 				svg
 					use(xlink:href='./svg/sprite.svg#logo')
-			+container()
+				svg
+					use(xlink:href='./svg/sprite.svg#logo-mobile')
+			+container('header__container')
 				nav.header__menu-list
 					each link in data.links
 						li.header__menu-link
@@ -15,21 +17,31 @@ mixin header(data)
 			.header__contacts
 				each contact in data.contacts
 					a.header__contact-link(href=contact.url)
-						svg
-							use(xlink:href=`./svg/sprite.svg#${contact.icon}`)
+						picture
+							source(media='(min-width: 1280px)', srcset=`./img/icons/${contact.icon}.png`)
+							img(src=`./img/icons/${contact.icon}-mobile.png`)
 						p= contact.text
 				.header__buttons
 					+button(data.button, 'header__callme')
 					a(href=data.send.href)= data.send.text
-		.header__mobile
-			a.header__logo(href='/')
-				svg
-					use(xlink:href='./svg/sprite.svg#logo-mobile')
-			.header__buttons-mobile
-				each contact in data.contacts
-					a.header__contact-link(href=contact.url)
-						svg
-							use(xlink:href=`./svg/sprite.svg#${contact.icon}`)
 				.header__hamburger
 					span
+
+		.header-mobile-nav
+			each contact in data.contacts
+				a.header-mobile-nav__contact-link(href=contact.url)
+					img(src=`./img/icons/${contact.icon}-mobile.png`)
+					p= contact.text
+			nav.header-mobile-nav__menu-list
+				each link in data.links
+					li.header-mobile-nav__menu-link
+						a(href=link.href)= link.text
+			a.header-mobile-nav__contact-link(href='tel:+74952150365')
+				img(src='./img/icons/phone.png')
+				p 8 (495) 215-03-65
+			.header-mobile-nav__socials
+				each social in data.socials
+					a.header-mobile-nav__socials-icon(href='#')
+						img(src=`./img/icons/${social}.png`)
+
 

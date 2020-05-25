@@ -1,11 +1,11 @@
 .form {
-	padding: 32px;
+	padding: 48px 60px 41px;
 	color: $white;
 	border: 1px solid $light-gray;
 	border-radius: 5px;
 	background-color: rgba(#16171c, 0.5);
 
-	@media (min-width: $tMin) {
+	@media (min-width: $d1280) {
 		padding: 48px 113px 41px;
 	}
 
