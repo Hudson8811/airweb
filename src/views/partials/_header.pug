@@ -28,20 +28,40 @@ mixin header(data)
 					span
 
 		.header-mobile-nav
-			each contact in data.contacts
-				a.header-mobile-nav__contact-link(href=contact.url)
-					img(src=`./img/icons/${contact.icon}-mobile.png`)
-					p= contact.text
+			.header-mobile-nav__top
+				svg
+					use(xlink:href='./svg/sprite.svg#logo-menu')
+				.header-mobile-nav__close
+					span
 			nav.header-mobile-nav__menu-list
+				each contact in data.mobile.contacts
+					li.header-mobile-nav__menu-item.header-mobile-nav__item-contact
+						a(href=contact.url)
+							.header-mobile-nav__icon-wrapper
+								img(src=`./img/icons/${contact.icon}-mobile.png`)
+							p= contact.text
 				each link in data.links
-					li.header-mobile-nav__menu-link
-						a(href=link.href)= link.text
-			a.header-mobile-nav__contact-link(href='tel:+74952150365')
-				img(src='./img/icons/phone.png')
-				p 8 (495) 215-03-65
-			.header-mobile-nav__socials
-				each social in data.socials
-					a.header-mobile-nav__socials-icon(href='#')
-						img(src=`./img/icons/${social}.png`)
+					li.header-mobile-nav__menu-item
+						if link.submenu
+							.header-mobile-nav__menu-item-text= link.text
+						else
+							a(href=link.href)= link.text
+						if link.submenu
+							.header-mobile-nav__show-btn
+								.header-mobile-nav__show-btn-wrapper
+									span.header-mobile-nav__arrow
+							nav.header-mobile-nav__submenu-list
+								each sublink in link.submenu
+									li.header-mobile-nav__submenu-item
+										a(href=sublink.href)= sublink.text
+			.header-mobile-nav__bottom
+				a.header-mobile-nav__contact-link(href='tel:+74952150365')
+					.header-mobile-nav__icon-wrapper.header-mobile-nav__icon-wrapper--big
+						img(src='./img/icons/phone.png')
+					p 8 (495) 215-03-65
+				.header-mobile-nav__socials
+					each social in data.socials
+						a.header-mobile-nav__socials-icon(href='#')
+							img(src=`./img/icons/${social}.png`)
 
 

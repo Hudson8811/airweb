@@ -2,7 +2,21 @@
 	"links": [
 		{
 			"href": "#",
-			"text": "Услуги и цены"
+			"text": "Услуги и цены",
+			"submenu": [
+				{
+					"href": "#",
+					"text": "1"
+				},
+				{
+					"href": "#",
+					"text": "2"
+				},
+				{
+					"href": "#",
+					"text": "3"
+				}
+			]
 		},
 		{
 			"href": "#",
@@ -14,7 +28,29 @@
 		},
 		{
 			"href": "#",
-			"text": "О компании"
+			"text": "О компании",
+			"submenu": [
+				{
+					"href": "#",
+					"text": "Новости"
+				},
+				{
+					"href": "#",
+					"text": "Партнеры"
+				},
+				{
+					"href": "#",
+					"text": "Команда"
+				},
+				{
+					"href": "#",
+					"text": "Отзывы клиентов"
+				},
+				{
+					"href": "#",
+					"text": "Привелегии и скидки"
+				}
+			]
 		},
 		{
 			"href": "#",
@@ -44,5 +80,19 @@
 		"href": "#",
 		"text": "Отправить письмо"
 	},
-	"socials": ["vk", "instagram", "fb"]
+	"socials": ["vk", "instagram", "fb"],
+	"mobile": {
+		"contacts": [
+			{
+				"icon": "phone",
+				"url": "tel:+74952150365",
+				"text": "Заказать звонок"
+			},
+			{
+				"icon": "mail",
+				"url": "mailto:info@agency-air.ru",
+				"text": "Отправить письмо"
+			}
+		]
+	}
 }
