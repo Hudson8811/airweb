@@ -1,0 +1,13 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/title.pug
+include partials/discount/discount.pug
+
+block vars
+
+block main
+	+title(discountCatalog.title)
+	+discount(discountCatalog.discount)
+	+feedback(discountCatalog.feedback)
+	+map()

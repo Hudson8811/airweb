@@ -3,4 +3,4 @@ mixin button(data, className)
 		a.button(href=data.href, class=className)= data.text
 	else
 		button.button(class=className)
-			span= data.text
+			span= (data.text || 'Подробнее')

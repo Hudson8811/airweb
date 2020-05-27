@@ -1,8 +1,12 @@
 include ../../components/container.pug
+include ../../components/picture.pug
 include form.pug
 
 mixin feedback(data)
 	.feedback
+		.feedback__wrapper
+			if data.img
+				+picture(data.img, 'feedback__img')
 		+container('feedback__container')
 			+form(data.form, 'feedback__form')
 			.feedback__info

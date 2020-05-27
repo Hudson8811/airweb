@@ -1,0 +1,7 @@
+include ../../components/container.pug
+include offer.pug
+
+mixin discount(data)
+	.discount
+		each item in data.offers
+			+offer(item)

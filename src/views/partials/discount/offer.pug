@@ -1,0 +1,14 @@
+include ../../components/button.pug
+include ../../components/picture.pug
+
+mixin offer(data)
+	.offer(class=(data.reverse ? 'offer--reverse' : ''))
+		.offer__wrapper
+			.offer__inner
+				+picture(data.img, 'offer__img')
+		+container('offer__container')
+			if data.validity
+				.offer__validity= data.validity
+			.offer__title= data.title
+			.offer__desc= data.desc
+			+button('', 'button--arrow offer__button')
