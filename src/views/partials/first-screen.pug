@@ -1,0 +1,15 @@
+include ../components/container.pug
+include ../components/button.pug
+
+mixin first-screen(data)
+	.first-screen
+		.first-screen__wrapper
+			if data.img
+				+picture(data.img, 'first-screen__img')
+		+container('first-screen__container')
+			.first-screen__slider
+				each slide in data.slides
+					.first-screen__slide
+						.first-screen__title= slide.title
+						.first-screen__desc= slide.desc
+						+button(slide.button, 'first-screen__button')

@@ -1,4 +1,10 @@
 .title {
+	margin-top: 20px;
+
+	@media (min-width: $d1280) {
+		margin-top: 30px;
+	}
+
 	&__text {
 		font-size: 36px;
 		color: $light-black;

@@ -12,3 +12,4 @@
 //= partials/header.js
 //= partials/footer.js
 //= partials/form.js
+//= partials/index.js

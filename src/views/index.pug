@@ -1,0 +1,11 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+
+block vars
+
+block main
+	+first-screen(index.firstScreen)
+	+feedback(index.feedback)
+	+map()
