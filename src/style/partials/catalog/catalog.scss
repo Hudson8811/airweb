@@ -14,4 +14,49 @@
 		padding: 15px 54px 17px 36px;
 		margin: 5px auto 44px;
 	}
+
+	.article {
+		&:nth-child(5n-4) {
+			background-color: $black-23;
+		}
+
+		&:nth-child(5n-3) {
+			background-color: $gray-40;
+		}
+
+		&:nth-child(5n-2) {
+			background-color: $gray-40;
+
+			@media (min-width: $d1280) {
+				margin: 25px 0;
+			}
+		}
+
+		&:nth-child(5n-1) {
+			background-color: $blue;
+
+			@media (min-width: $d1280) {
+				margin-bottom: 25px;
+			}
+		}
+
+		&:nth-child(5n) {
+			background-color: $gray-e2;
+
+			@media (min-width: $d1280) {
+				margin-bottom: 25px;
+			}
+
+			.article {
+				&__desc,
+				&__title {
+					color: $dark-gray;
+				}
+
+				&__date {
+					color: $gray-tag-dark;
+				}
+			}
+		}
+	}
 }

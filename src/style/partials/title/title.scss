@@ -13,6 +13,11 @@
 		margin: 31px 0;
 	}
 
+	&__subtitle {
+		font-size: 22px;
+		color: $red;
+	}
+
 	&__tags {
 		display: flex;
 		flex-wrap: wrap;

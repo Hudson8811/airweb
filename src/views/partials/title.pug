@@ -5,8 +5,11 @@ include ../components/button.pug
 mixin title(data)
 	.title
 		+container()
-			+breadcrumbs(data.breadcrumbs)
+			if data.breadcrumbs
+				+breadcrumbs(data.breadcrumbs)
 			.title__text= data.text
+			if data.subtitle
+				.title__subtitle= data.subtitle
 			if data.tags
 				.title__tags
 					each tag, i in data.tags

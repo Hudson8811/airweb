@@ -1,0 +1,37 @@
+.services {
+	&__articles {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	.article {
+		background-color: $black-23;
+
+		&__xsmall-wrapper {
+			&:nth-child(5) {
+				.article {
+					background-color: #363241;
+				}
+			}
+
+			&:nth-child(6) {
+				.article {
+					background-color: $gray-e2;
+				}
+			}
+
+			&:nth-child(7) {
+				.article {
+					background-color: $gray-e2;
+				}
+			}
+
+			&:nth-child(8) {
+				.article {
+					background-color: $red;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+include article.pug
+include ../../components/container.pug
+include ../../partials/title.pug
+
+mixin services(data)
+	.services
+		+container('services__container')
+			+title(data.title)
+			.services__articles
+				- for (var i = 0; i < data.articles.length; i++) {
+						if data.articles[i].size === 'xsmall'
+							.article__xsmall-wrapper
+								+article(data.articles[i])
+								+article(data.articles[i+1])
+								- i++
+						else
+							+article(data.articles[i])
+				- }

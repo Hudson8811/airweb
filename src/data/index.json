@@ -42,6 +42,94 @@
 			}
 		]
 	},
+	"services": {
+		"title": {
+			"text": "Услуги",
+			"subtitle": "Лучшие решения для увеличения продаж"
+		},
+		"articles": [
+			{
+				"size": "small",
+				"img": {
+					"dir": "services",
+					"name": "services-1",
+					"type": "jpg"
+				},
+				"title": "Размещение рекламы",
+				"desc": "<nav> <li>Реклама в Яндекс Директ</li> <li>Реклама в социальных сетях</li> <li>Реклама в Google Ads</li> <li>SMM</li> </nav>",
+				"price": "<span>от</span> 10 000 &#8381;"
+			},
+			{
+				"size": "small",
+				"img": {
+					"dir": "services",
+					"name": "services-2",
+					"type": "jpg"
+				},
+				"title": "SEO продвижение",
+				"desc": "<nav> <li>SEO для Start-up’ов</li> <li>SEO для интернет магазинов</li> <li>SEO для сайта услуг</li> </nav>",
+				"price": "<span>от</span> 15 000 &#8381;"
+			},
+			{
+				"size": "small",
+				"img": {
+					"dir": "services",
+					"name": "services-3",
+					"type": "jpg"
+				},
+				"title": "Aналитика",
+				"desc": "<nav> <li>Аудит контекстной рекламы</li> <li>Конверсионный аудит</li> <li>Прослушка звонков</li> <li>Аудит SEO</li> <li>Настройка сквозной аналитики</li> </nav>",
+				"price": "<span>от</span> 5 000 &#8381;"
+			},
+			{
+				"size": "small",
+				"img": {
+					"dir": "services",
+					"name": "services-4",
+					"type": "jpg"
+				},
+				"title": "Создание сайтов",
+				"desc": "<nav> <li>Создание Landing Page</li> <li>Создание корпоративного сайта</li> <li>Создание интернет-магазина</li> <li>Поддержка сайта</li> </nav>",
+				"price": "<span>от</span> 10 000 &#8381;"
+			},
+			{
+				"size": "xsmall",
+				"img": {
+					"dir": "services",
+					"name": "services-5",
+					"type": "jpg"
+				},
+				"title": "Менее значимая услуга"
+			},
+			{
+				"size": "xsmall",
+				"img": {
+					"dir": "services",
+					"name": "services-6",
+					"type": "jpg"
+				},
+				"title": "Менее значимая услуга"
+			},
+			{
+				"size": "xsmall",
+				"img": {
+					"dir": "services",
+					"name": "services-7",
+					"type": "jpg"
+				},
+				"title": "Менее значимая услуга"
+			},
+			{
+				"size": "xsmall",
+				"img": {
+					"dir": "services",
+					"name": "services-8",
+					"type": "jpg"
+				},
+				"title": "Менее значимая услуга"
+			}
+		]
+	},
 	"feedback": {
 		"img": {
 			"name": "bg-macbook",
