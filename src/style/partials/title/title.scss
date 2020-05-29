@@ -6,16 +6,24 @@
 	}
 
 	&__text {
-		font-size: 36px;
+		font-size: 30px;
 		color: $light-black;
 		text-transform: uppercase;
 		font-weight: 400;
 		margin: 31px 0;
+
+		@media (min-width: $dMin) {
+			font-size: 36px;
+		}
 	}
 
 	&__subtitle {
-		font-size: 22px;
+		font-size: 20px;
 		color: $red;
+
+		@media (min-width: $dMin) {
+			font-size: 22px;
+		}
 	}
 
 	&__tags {
@@ -40,6 +48,12 @@
 			color: $white;
 			background-color: $red;
 			border: none;
+		}
+	}
+
+	&--margin {
+		.title__text {
+			margin-bottom: 13px;
 		}
 	}
 }

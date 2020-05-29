@@ -445,6 +445,89 @@
 			}
 		]
 	},
+	"clients": {
+		"title": {
+			"text": "Наши клиенты",
+			"subtitle": "Более 800 довольных клиентов по всей Росии"
+		},
+		"slides": [
+			{
+				"dir": "clients",
+				"name": "willed",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "stroi-bazik",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "gris",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "nord-wheel",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "na-melnitse",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "willed",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "stroi-bazik",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "gris",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "nord-wheel",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "na-melnitse",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "willed",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "stroi-bazik",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "gris",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "nord-wheel",
+				"type": "png"
+			},
+			{
+				"dir": "clients",
+				"name": "na-melnitse",
+				"type": "png"
+			}
+		]
+	},
 	"feedback": {
 		"img": {
 			"name": "bg-macbook",

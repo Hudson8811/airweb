@@ -3,7 +3,7 @@ include ../partials/title.pug
 
 mixin case(data)
 	.case
-		+title(data.title)
+		+title(data.title, 'title--margin')
 		+container('case__container')
 			if data.img
 				+picture(data.img, 'case__img')

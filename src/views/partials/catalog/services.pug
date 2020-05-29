@@ -5,8 +5,8 @@ include ../../components/button.pug
 
 mixin services(data)
 	.services
+		+title(data.title, 'title--margin')
 		+container('services__container')
-			+title(data.title)
 			.services__articles
 				- for (var i = 0; i < data.articles.length; i++) {
 						if data.articles[i].size === 'xsmall'

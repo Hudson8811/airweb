@@ -1,6 +1,5 @@
 .services {
-	margin-top: -40px;
-	padding: 130px 0 120px;
+	padding: 60px 0 120px;
 	background-color: $light-gray;
 	position: relative;
 
@@ -19,6 +18,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		margin-top: 20px;
+
+		@media (min-width: $dMin) {
+			margin-top: 25px;
+		}
+
+		@media (min-width: $d1280) {
+			margin-top: 50px;
+		}
 	}
 
 	&__button {

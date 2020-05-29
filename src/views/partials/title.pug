@@ -2,8 +2,8 @@ include ../components/container.pug
 include ../components/breadcrumbs.pug
 include ../components/button.pug
 
-mixin title(data)
-	.title
+mixin title(data, mod)
+	.title(class=mod)
 		+container()
 			if data.breadcrumbs
 				+breadcrumbs(data.breadcrumbs)

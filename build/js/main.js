@@ -105,4 +105,35 @@ $(document).ready(function () {
 			}
 		]
 	});
+
+	$('.clients__slider').slick({
+		slidesToShow: 5,
+		slidesToScroll: 5,
+		prevArrow: '<button class="clients__arrow clients__arrow-prev" aria-hidden="true"><span></span></button>',
+		nextArrow: '<button class="clients__arrow clients__arrow-next" aria-hidden="true"><span></span></button>',
+		dots: true,
+		customPaging: function() {
+			return '<button class="clients__dot"></button>';
+		},
+		infinite: true,
+		responsive: [
+			{
+				breakpoint: 1000,
+				settings: {
+					slidesToShow: 3,
+					slidesToScroll: 3,
+					dots: false
+				}
+			},
+			{
+				breakpoint: 768,
+				settings: "unslick"
+			}
+		]
+	});
+
+	$('.clients__button').click(function () {
+		$('.clients__slide--hide').slideDown(400);
+		$('.clients__button').addClass('clients__slide--hide');
+	});
 });

@@ -1,0 +1,15 @@
+include ../components/container.pug
+include ../partials/title.pug
+include ../components/picture.pug
+include ../components/button.pug
+
+mixin clients(data)
+	.clients
+		+title(data.title, 'title--margin')
+		+container('clients__container')
+			.clients__slider
+				each slide, index in data.slides
+					.clients__slide(class=(index > 1 ? 'clients__slide--hide' : ''))
+						.clients__company
+							+picture(slide, 'clients__img')
+			+button('', 'clients__button')
