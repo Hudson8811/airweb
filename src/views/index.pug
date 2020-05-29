@@ -4,6 +4,7 @@ include partials/feedback/feedback.pug
 include partials/first-screen.pug
 include partials/catalog/services.pug
 include partials/case.pug
+include partials/about.pug
 
 block vars
 
@@ -11,5 +12,6 @@ block main
 	+first-screen(index.firstScreen)
 	+services(index.services)
 	+case(index.case)
+	+about(index.about)
 	+feedback(index.feedback)
 	+map()

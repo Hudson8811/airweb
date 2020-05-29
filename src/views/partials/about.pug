@@ -1,0 +1,24 @@
+include ../components/container.pug
+include ../partials/title.pug
+include ../components/picture.pug
+
+mixin about(data)
+	.about
+		+title(data.title)
+		+container('about__container')
+			.about__top
+				.about__content
+					.about__achievements
+						each item in data.achievements
+							.about__item
+								.about__item-title= item.title
+								.about__item-text= item.text
+					.about__desc!= data.desc
+				.about__picture
+					+picture(data.img, 'about__img')
+			.about__bottom
+				.about__title= data.titleBottom
+				.about__partners
+					each partner in data.partners
+						.about__partner
+							+picture(partner, 'about__img')
