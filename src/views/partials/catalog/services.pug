@@ -1,6 +1,7 @@
 include article.pug
 include ../../components/container.pug
 include ../../partials/title.pug
+include ../../components/button.pug
 
 mixin services(data)
 	.services
@@ -16,3 +17,4 @@ mixin services(data)
 						else
 							+article(data.articles[i])
 				- }
+		+button(data.button, 'button--arrow services__button')

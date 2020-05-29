@@ -7,13 +7,15 @@ mixin article(data)
 			.article__picture
 				+picture(data.img, 'article__img')
 		.article__wrapper
-			.article__tags= data.tag
+			if data.tag
+				.article__tags= data.tag
 			.article__title= data.title
 			if data.desc
 				.article__desc!= data.desc
-			.article__more
-				+button('', 'button--arrow article__button')
-				if data.date
-					.article__date= data.date
-				if data.price
-					.article__price!= data.price
+			if data.more
+				.article__more
+					+button('', 'button--arrow article__button')
+					if data.more.date
+						.article__date= data.date
+					if data.more.price
+						.article__price!= data.price

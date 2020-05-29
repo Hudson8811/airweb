@@ -3,11 +3,13 @@ include partials/map.pug
 include partials/feedback/feedback.pug
 include partials/first-screen.pug
 include partials/catalog/services.pug
+include partials/case.pug
 
 block vars
 
 block main
 	+first-screen(index.firstScreen)
 	+services(index.services)
+	+case(index.case)
 	+feedback(index.feedback)
 	+map()

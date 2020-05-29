@@ -1,0 +1,25 @@
+include ../components/container.pug
+include ../partials/title.pug
+
+mixin case(data)
+	.case
+		+title(data.title)
+		+container('case__container')
+			if data.img
+				+picture(data.img, 'case__img')
+			.case__slider
+				each slide in data.slides
+					.case__slide
+						.case__slide-wrapper
+							.case__col
+								.case__title= slide.title
+								.case__subtitle= slide.subtitle
+								a.case__link(href=slide.link.href)= slide.link.text
+								.case__ready= slide.ready
+								.case__desc!= slide.desc
+							.case__col
+								.case__stats
+									each stat in slide.stats
+										.case__stat
+											.case__stat-percent= stat.percent
+											.case__stat-item= stat.item
