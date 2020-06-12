@@ -1,0 +1,24 @@
+include ../components/container
+include title
+include ../components/picture
+
+mixin cooperation(data)
+	.cooperation
+		+title(data.title, 'title--margin')
+		+container('cooperation__container')
+			.cooperation__steps
+				each step in data.steps
+					.cooperation__step&attributes(step.active)
+						.cooperation__step-num= step.num
+						.cooperation__step-text= step.text
+		.cooperation__tab-content
+			each content in data.contents
+				.cooperation__content&attributes(content.active)
+					+container('cooperation__container-bottom')
+						.cooperation__left
+							.cooperation__title= content.subtitle
+							ul.cooperation__list
+								each item in content.list
+									li.cooperation__list-item!= item
+						.cooperation__right
+							+picture(content.img, 'cooperation__img')
