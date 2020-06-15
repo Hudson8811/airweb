@@ -153,9 +153,11 @@
 	&__link {
 		color: $gray-tag-dark;
 
-		&--active {
-			color: $red;
-			text-decoration: underline;
+		color: $red;
+		text-decoration: underline;
+		&--span {
+			color: $gray-tag-dark;
+			text-decoration: none;
 		}
 	}
 }

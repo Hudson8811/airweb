@@ -1,0 +1,25 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/catalog/catalog.pug
+
+include components/breadcrumbs.pug
+include components/topSecTypeBlogItem.pug
+include components/blogitemPageMain.pug
+include components/bipInteresting.pug
+
+
+block vars
+
+block main
+	if blogitemPage.topSecTypeBlogItem
+		+topSecTypeBlogItem(blogitemPage.topSecTypeBlogItem)
+	.container
+		if blogitemPage.breadcrumbs
+			+breadcrumbs(blogitemPage.breadcrumbs)
+
+
+		+blogitemPageMain()
+
+	+bipInteresting(blogitemPage.bipInteresting)
+
+	+map()
