@@ -16,6 +16,6 @@ mixin article(data)
 				.article__more
 					+button('', 'button--arrow article__button')
 					if data.more.date
-						.article__date= data.date
+						.article__date= data.more.date
 					if data.more.price
-						.article__price!= data.price
+						.article__price!= data.more.price

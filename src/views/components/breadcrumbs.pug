@@ -1,8 +1,9 @@
 mixin breadcrumbs(links, className)
 	nav.breadcrumbs(class= className)
+
 		each link, i in links
 			li
-				if i === 0
-					a.breadcrumbs__link.breadcrumbs__link--active(href=link.href)= link.title
-				else
+				if i != links.length-1
 					a.breadcrumbs__link(href=link.href)= link.title
+				else
+					span.breadcrumbs__link.breadcrumbs__link--span= link.title
