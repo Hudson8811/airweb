@@ -257,12 +257,11 @@
     z-index: 1;
     margin-top: 30px;
     padding-top: 127px;
+    padding-bottom: 68px;
 }
 
 .bip-interesting-bg {
     background-color: #f1f3f8;
-    padding-top: 141px;
-    padding-bottom: 162px;
     transform: skew(0, -3deg);
     overflow: hidden;
     position: absolute;
@@ -277,7 +276,8 @@
 }
 
 .bip-interesting-container {
-    position: relative;z-index: 2;
+    position: relative;
+    z-index: 2;
 }
 
 .bip-interesting-title {
@@ -320,7 +320,9 @@
 
     .article__tags {}
 
-    .article__title {flex-grow: 1;}
+    .article__title {
+        flex-grow: 1;
+    }
 
     .article__desc {}
 
@@ -339,4 +341,134 @@
 
         span {}
     }
+}
+
+
+.button--arrow {
+    box-sizing: border-box;
+    transition-duration: .2s;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+
+
+
+.folon-block {
+    position: relative;
+    z-index: 1;
+    background-color: #f1f3f8;
+    padding-top: 132px;
+    padding-bottom: 86px;
+}
+
+.folon-bg {
+    overflow: hidden;
+    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.folon-bg-l-2 {
+
+    transform: skew(0, 3deg);
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    transform-origin: top left;
+
+    img {}
+
+}
+
+
+.folon-main {
+    position: relative;
+    z-index: 2;
+}
+
+.folon-form {
+
+    border-radius: 5px;
+    border: 1px solid #f1f3f8;
+    background-color: #16171c;
+    padding: 68px 50px 73px;
+
+    &__title {
+        color: #ffffff;
+        font-size: 30px;
+        font-weight: 400;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    &__text {
+        color: #aeb1b8;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 28px;
+        text-align: center;
+        margin: 8px auto 0;
+        width: 857px;
+        max-width: 100%;
+    }
+
+    &__flex-ib {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 133px;
+    }
+
+    &__privacy {
+        color: #aeb1b8;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 22px;
+        text-align: center;
+        margin: 33px auto 0;
+        width: 622px;
+        max-width: 100%;
+    }
+
+}
+
+.folon-input {
+    width: 392px;
+    max-width: 100%;
+    border-radius: 5px;
+    background-color: #f1f3f8;
+    height: 40px;
+    box-sizing: border-box;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 0 17px;
+
+    &::placeholder {
+
+        color: #6e7279;
+    }
+
+}
+
+.folon-button {
+    margin-left: 20px;
+    width: 201px;
+    box-sizing: border-box;
+    font-size: 18px;
+    font-weight: 300;
+    height: 40px;
 }
