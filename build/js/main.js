@@ -137,11 +137,20 @@ $(document).ready(function () {
 		$('.clients__button').addClass('clients__slide--hide');
 	});
 
-	$('.cooperation__step').click(function () {
-		if (!$(this).hasClass('cooperation__step--active')) {
-			$('.cooperation__step').removeClass('cooperation__step--active');
-			$(this).addClass('cooperation__step--active');
-			$('.cooperation__content').hide().eq($(this).index()).fadeIn(300);
-		}
-	});
+	// cooperation block tabs
+	if (window.matchMedia('(min-width: 1000px)').matches) {
+		$('.cooperation__step').click(function () {
+			if (!$(this).hasClass('cooperation__step--active')) {
+				$('.cooperation__step').removeClass('cooperation__step--active');
+				$(this).addClass('cooperation__step--active');
+				$('.cooperation__content').hide().eq($(this).index() / 2).fadeIn(300);
+			}
+		});
+	}
+	// cooperation block accordion
+	else {
+		$('.cooperation__step').click(function () {
+			$(this).next().slideToggle(300);
+		});
+	}
 });
