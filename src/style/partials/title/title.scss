@@ -10,7 +10,7 @@
 		color: $light-black;
 		text-transform: uppercase;
 		font-weight: 400;
-		margin: 31px 0;
+		margin-top: 54px;
 
 		@media (min-width: $dMin) {
 			font-size: 36px;
@@ -48,12 +48,6 @@
 			color: $white;
 			background-color: $red;
 			border: none;
-		}
-	}
-
-	&--margin {
-		.title__text {
-			margin-bottom: 13px;
 		}
 	}
 }

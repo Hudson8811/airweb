@@ -1,8 +1,8 @@
 include ../components/container.pug
 include ../components/button.pug
 
-mixin first-screen(data)
-	.first-screen
+mixin first-screen(data, classMod)
+	.first-screen(class= classMod)
 		.first-screen__wrapper
 			if data.img
 				+picture(data.img, 'first-screen__img')

@@ -74,14 +74,15 @@ $(document).ready(function() {
 	$('select').niceSelect();
 });
 $(document).ready(function () {
-	$('.first-screen__slider').slick({
+	$('.first-screen--main .first-screen__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button class="first-screen__arrow first-screen__arrow-prev" aria-hidden="true"><span></span></button>',
 		nextArrow: '<button class="first-screen__arrow first-screen__arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots custom-dots--white",
 		customPaging: function() {
-			return '<button class="first-screen__dot"></button>';
+			return '<button class="custom-dot custom-dot--white"></button>';
 		},
 		infinite: true
 	});
@@ -92,8 +93,9 @@ $(document).ready(function () {
 		prevArrow: '<button class="case__arrow case__arrow-prev" aria-hidden="true"><span></span></button>',
 		nextArrow: '<button class="case__arrow case__arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots custom-dots--white",
 		customPaging: function() {
-			return '<button class="case__dot"></button>';
+			return '<button class="custom-dot custom-dot--white"></button>';
 		},
 		infinite: true,
 		responsive: [
@@ -109,11 +111,12 @@ $(document).ready(function () {
 	$('.clients__slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 5,
-		prevArrow: '<button class="clients__arrow clients__arrow-prev" aria-hidden="true"><span></span></button>',
-		nextArrow: '<button class="clients__arrow clients__arrow-next" aria-hidden="true"><span></span></button>',
+		prevArrow: '<button class="custom-arrow custom-arrow-prev" aria-hidden="true"><span></span></button>',
+		nextArrow: '<button class="custom-arrow custom-arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots",
 		customPaging: function() {
-			return '<button class="clients__dot"></button>';
+			return '<button class="custom-dot"></button>';
 		},
 		infinite: true,
 		responsive: [
@@ -152,5 +155,41 @@ $(document).ready(function () {
 		$('.cooperation__step').click(function () {
 			$(this).next().slideToggle(300);
 		});
+	}
+});
+$(document).ready(function () {
+	$('.stage__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button class="custom-arrow custom-arrow-prev custom-arrow--seo custom-arrow-prev--seo" aria-hidden="true"><span></span></button>',
+		nextArrow: '<button class="custom-arrow custom-arrow-next custom-arrow--seo custom-arrow-next--seo" aria-hidden="true"><span></span></button>',
+		dots: true,
+		dotsClass: "custom-dots custom-dots--seo",
+		customPaging: function(slider, index) {
+			return '<button class="custom-dot custom-dot--seo">'+ (index + 1) + '</button>';
+		},
+		infinite: true
+	}).on('swipe', function () {
+		moveSlideProgress();
+	});
+
+	var dotLength = $('.custom-dots--seo li').length;
+
+	$('.stage__progress-current').css('max-width', 'calc(100% / ' + dotLength + ' - 15px)');
+
+	// Set padding between first dot
+	$('.custom-dots--seo li').first().css('margin-left', 'calc(100% / ' + dotLength + ' - 15px)');
+
+	// Move progressbar events
+	$('.custom-dot--seo').click(function () {
+		$('.stage__progress-current').css('max-width', 'calc(100% / ' + dotLength + ' * ' + ($(this).parent().index() + 1) + ')');
+	});
+
+	$('.custom-arrow--seo').click(function () {
+		moveSlideProgress();
+	});
+
+	function moveSlideProgress() {
+		$('.stage__progress-current').css('max-width', 'calc(100% / ' + dotLength + ' * ' + ($('.custom-dot--seo').parent('.slick-active').index() + 1) + ')');
 	}
 });

@@ -244,24 +244,13 @@
 		}
 	}
 
-	.slick-dots {
+	.custom-dots {
 		display: flex;
 		margin-top: 60px;
 		justify-content: flex-end;
-
-		.slick-active {
-			.case__dot {
-				background-color: $white;
-			}
-		}
 	}
 
-	&__dot {
-		width: 13px;
-		height: 13px;
-		padding: 0;
-		border: 1px solid $white;
-		border-radius: 50%;
-		margin-right: 10px;
+	&--seo-service {
+		margin-top: 106px;
 	}
 }

@@ -131,26 +131,4 @@
 			}
 		}
 	}
-
-	.slick-dots {
-		display: flex;
-		margin-top: 43px;
-		margin-left: 127px;
-
-		.slick-active {
-			.clients__dot {
-				background-color: $red;
-				border: 1px solid $red;
-			}
-		}
-	}
-
-	&__dot {
-		width: 15px;
-		height: 15px;
-		padding: 0;
-		border: 1px solid $gray-c3;
-		border-radius: 50%;
-		margin-right: 10px;
-	}
 }

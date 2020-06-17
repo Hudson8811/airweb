@@ -55,10 +55,10 @@ var path = {
 
 var config = {
 	server: {
-		baseDir: "./build",
-		index: "blog-catalog.html"
+		baseDir: "./build"
 	},
 	//tunnel: true,
+	directory: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "PipZip"

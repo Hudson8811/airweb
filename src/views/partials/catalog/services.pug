@@ -5,7 +5,7 @@ include ../../components/button.pug
 
 mixin services(data)
 	.services
-		+title(data.title, 'title--margin')
+		+title(data.title)
 		+container('services__container')
 			.services__articles
 				- for (var i = 0; i < data.articles.length; i++) {

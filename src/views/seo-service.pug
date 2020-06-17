@@ -1,0 +1,21 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+include partials/stage.pug
+include partials/expert.pug
+include partials/case.pug
+include partials/about.pug
+include partials/clients.pug
+
+block vars
+
+block main
+	+first-screen(seoService.firstScreen, 'first-screen--seo-service')
+	+expert(seoService.expert)
+	+case(seoService.case, 'case--seo-service')
+	+stage(seoService.stage)
+	//+about(seoService.about)
+	+clients(seoService.clients)
+	+feedback(seoService.feedback)
+	+map()

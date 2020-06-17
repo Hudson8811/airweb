@@ -1,9 +1,9 @@
 include ../components/container.pug
 include ../partials/title.pug
 
-mixin case(data)
-	.case
-		+title(data.title, 'title--margin')
+mixin case(data, classMod)
+	.case(class= classMod)
+		+title(data.title)
 		+container('case__container')
 			if data.img
 				+picture(data.img, 'case__img')

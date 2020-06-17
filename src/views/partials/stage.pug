@@ -1,0 +1,20 @@
+include ../components/container.pug
+include ../partials/title.pug
+include ../components/picture
+
+mixin stage(data)
+	.stage
+		+container()
+			+title(data.title)
+			.stage__progress
+				.stage__progress-all
+				.stage__progress-current
+			.stage__slider
+				each slide in data.slider
+					.stage__slide
+						.stage__wrapper
+							svg
+								use(xlink:href='./svg/sprite.svg#screen')
+							.stage__about
+								.stage__title= slide.title
+								.stage__text= slide.text

@@ -1,12 +1,13 @@
 $(document).ready(function () {
-	$('.first-screen__slider').slick({
+	$('.first-screen--main .first-screen__slider').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		prevArrow: '<button class="first-screen__arrow first-screen__arrow-prev" aria-hidden="true"><span></span></button>',
 		nextArrow: '<button class="first-screen__arrow first-screen__arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots custom-dots--white",
 		customPaging: function() {
-			return '<button class="first-screen__dot"></button>';
+			return '<button class="custom-dot custom-dot--white"></button>';
 		},
 		infinite: true
 	});
@@ -17,8 +18,9 @@ $(document).ready(function () {
 		prevArrow: '<button class="case__arrow case__arrow-prev" aria-hidden="true"><span></span></button>',
 		nextArrow: '<button class="case__arrow case__arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots custom-dots--white",
 		customPaging: function() {
-			return '<button class="case__dot"></button>';
+			return '<button class="custom-dot custom-dot--white"></button>';
 		},
 		infinite: true,
 		responsive: [
@@ -34,11 +36,12 @@ $(document).ready(function () {
 	$('.clients__slider').slick({
 		slidesToShow: 5,
 		slidesToScroll: 5,
-		prevArrow: '<button class="clients__arrow clients__arrow-prev" aria-hidden="true"><span></span></button>',
-		nextArrow: '<button class="clients__arrow clients__arrow-next" aria-hidden="true"><span></span></button>',
+		prevArrow: '<button class="custom-arrow custom-arrow-prev" aria-hidden="true"><span></span></button>',
+		nextArrow: '<button class="custom-arrow custom-arrow-next" aria-hidden="true"><span></span></button>',
 		dots: true,
+		dotsClass: "custom-dots",
 		customPaging: function() {
-			return '<button class="clients__dot"></button>';
+			return '<button class="custom-dot"></button>';
 		},
 		infinite: true,
 		responsive: [

@@ -134,24 +134,28 @@
 		}
 	}
 
-	.slick-dots {
+	.custom-dots {
 		display: flex;
 		margin-top: 60px;
 		margin-left: 127px;
-
-		.slick-active {
-			.first-screen__dot {
-				background-color: $white;
-			}
-		}
 	}
 
-	&__dot {
-		width: 13px;
-		height: 13px;
-		padding: 0;
-		border: 1px solid $white;
-		border-radius: 50%;
-		margin-right: 10px;
+	&--seo-service {
+		.first-screen {
+			&__container {
+				padding: 160px 0 70px;
+			}
+
+			&__desc {
+				margin: 26px 0 40px;
+				max-width: 680px;
+			}
+
+			&__button {
+				font-size: 24px;
+				padding: 30px 56px;
+				border-radius: 10px;
+			}
+		}
 	}
 }

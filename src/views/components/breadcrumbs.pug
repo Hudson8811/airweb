@@ -5,5 +5,6 @@ mixin breadcrumbs(links, className)
 			li
 				if i != links.length-1
 					a.breadcrumbs__link(href=link.href)= link.title
+					.breadcrumbs__arrow
 				else
 					span.breadcrumbs__link.breadcrumbs__link--span= link.title
