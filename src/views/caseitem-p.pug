@@ -1,0 +1,81 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/catalog/catalog.pug
+
+include components/breadcrumbs.pug
+include components/topSecTypeBlogItem.pug
+include components/blogitemPageMain.pug
+include components/bipInteresting.pug
+include components/followOurNews.pug
+
+
+block vars
+
+block main
+
+	.blogitem-page-top-sec
+		.bi-pts-bg
+			img(src="img/caseitem/CaseItem_Page-1.jpg")
+		.bi-pts-content.bi-pts-content--caseitem
+			.container
+				h1.bi-pts-title Рекламная компания для мебельной сети «Willed»
+				.bi-pts-text Digital-агентство АИР разработало рекламную стратегию для мебельной сети  WIlled», и количество заказов с сайта сразу выросло.
+
+	.container
+		if caseitemPage.breadcrumbs
+			+breadcrumbs(caseitemPage.breadcrumbs)
+
+			.project-info-block
+				.projinf-title Информация о проекте
+				.projinf-flex
+					a.projinf-logo-wrap(href="")
+						img.projinf-logo(src="img/caseitem/willed-logo.png", alt="")
+					.projinf-client-description
+						.projinf-client-description__title О клиенте
+						.projinf-client-description__text Мебельная сеть Willed предлагает услуги по предоставлени мебельных решений и их доставке в различных отправлений. Компания осуществляет доставку в любую точку мира, принимая заказы как от компаний, так и от частных лиц. На сегодняшний день представлено более 80 собственных представительств компании.
+						.projinf-client-flex
+							.projinf-client-flex-item
+								.projinf-client-flex-item__top Тип услуги
+								.projinf-client-flex-item__bottom Контекстная реклама
+							.projinf-client-flex-item
+								.projinf-client-flex-item__top Направление
+								.projinf-client-flex-item__bottom Интернет-магазины
+							.projinf-client-flex-item
+								.projinf-client-flex-item__top Регион
+								.projinf-client-flex-item__bottom Вся Россия
+							.projinf-client-flex-item
+								.projinf-client-flex-item__top
+								.projinf-client-flex-item__bottom
+									a(href="www.willed.ru") www.willed.ru
+
+				.projinf-targets-wrap
+					.projinf-targets-title Цели рекламной компании
+					.projinf-targets-flex
+						.projinf-target
+							.projinf-target__pic-wrap
+								img(src="img/caseitem/stats.svg", alt="")
+							.projinf-target__text Повышение заявок и звонков
+						.projinf-target
+							.projinf-target__pic-wrap
+								img(src="img/caseitem/conversion.svg", alt="")
+							.projinf-target__text Увеличение конверсионных показателей
+						.projinf-target
+							.projinf-target__pic-wrap
+								img(src="img/caseitem/buttonClick.svg", alt="")
+							.projinf-target__text Увеличение количества заказов с сайта
+						.projinf-target
+							.projinf-target__pic-wrap
+								img(src="img/caseitem/gear.svg", alt="")
+							.projinf-target__text Оптимизация бюджета на рекламные компании
+
+			img/caseitem/CaseItem_Page-2.jpg
+
+
+
+		+blogitemPageMain()
+
+	+bipInteresting(blogitemPage.bipInteresting)
+
+	+followOurNews()
+	+map()
+
