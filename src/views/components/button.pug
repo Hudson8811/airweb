@@ -1,6 +1,10 @@
 mixin button(data, className)
-	if data.href
-		a.button(href=data.href, class=className)= data.text
+	if(data && data.href && data.text)
+		if(data.span && data.span==="true")
+			a.button(href=data.href, class=className)
+				span= data.text
+		else
+			a.button(href=data.href, class=className)= data.text
 	else
 		button.button(class=className)
-			span= (data.text || 'Подробнее')
+			span= ((data && data.text)? data.text: 'Подробнее')

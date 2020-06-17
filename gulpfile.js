@@ -46,9 +46,10 @@ var path = {
 		js: 'src/js/**/*.js',
 		style: 'src/style/**/*.scss',
 		images: 'src/images/**/*.*',
-		img: 'src/img/**/*.*',
+		img: 'src/static/img/**/*.*',
 		svg: 'src/static/svg/*.svg',
-		fonts: 'src/fonts/**/*.*'
+		fonts: 'src/fonts/**/*.*',
+		data: 'src/data/**/*.*'
 	},
 	clean: './build'
 };
@@ -174,6 +175,7 @@ gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts
 
 gulp.task('watch', function(){
 	gulp.watch([path.watch.html], gulp.series("html:build"));
+	gulp.watch([path.watch.data], gulp.series("html:build"));
 	gulp.watch([path.watch.style], gulp.series("style:build"));
 	gulp.watch([path.watch.js], gulp.series("js:build"));
 	gulp.watch([path.watch.img], gulp.series("img:build"));
