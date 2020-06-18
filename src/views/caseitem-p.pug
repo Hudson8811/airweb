@@ -18,62 +18,142 @@ block main
 			img(src="img/caseitem/CaseItem_Page-1.jpg")
 		.bi-pts-content.bi-pts-content--caseitem
 			.container
-				h1.bi-pts-title Рекламная компания для мебельной сети «Willed»
+				h1.bi-pts-title Рекламная компания для мебельной сети&nbsp;«Willed»
 				.bi-pts-text Digital-агентство АИР разработало рекламную стратегию для мебельной сети  WIlled», и количество заказов с сайта сразу выросло.
 
 	.container
 		if caseitemPage.breadcrumbs
 			+breadcrumbs(caseitemPage.breadcrumbs)
 
-			.project-info-block
-				.projinf-title Информация о проекте
-				.projinf-flex
-					a.projinf-logo-wrap(href="")
-						img.projinf-logo(src="img/caseitem/willed-logo.png", alt="")
-					.projinf-client-description
-						.projinf-client-description__title О клиенте
-						.projinf-client-description__text Мебельная сеть Willed предлагает услуги по предоставлени мебельных решений и их доставке в различных отправлений. Компания осуществляет доставку в любую точку мира, принимая заказы как от компаний, так и от частных лиц. На сегодняшний день представлено более 80 собственных представительств компании.
-						.projinf-client-flex
-							.projinf-client-flex-item
-								.projinf-client-flex-item__top Тип услуги
-								.projinf-client-flex-item__bottom Контекстная реклама
-							.projinf-client-flex-item
-								.projinf-client-flex-item__top Направление
-								.projinf-client-flex-item__bottom Интернет-магазины
-							.projinf-client-flex-item
-								.projinf-client-flex-item__top Регион
-								.projinf-client-flex-item__bottom Вся Россия
-							.projinf-client-flex-item
-								.projinf-client-flex-item__top
-								.projinf-client-flex-item__bottom
-									a(href="www.willed.ru") www.willed.ru
 
-				.projinf-targets-wrap
-					.projinf-targets-title Цели рекламной компании
-					.projinf-targets-flex
-						.projinf-target
-							.projinf-target__pic-wrap
-								img(src="img/caseitem/stats.svg", alt="")
-							.projinf-target__text Повышение заявок и звонков
-						.projinf-target
-							.projinf-target__pic-wrap
-								img(src="img/caseitem/conversion.svg", alt="")
-							.projinf-target__text Увеличение конверсионных показателей
-						.projinf-target
-							.projinf-target__pic-wrap
-								img(src="img/caseitem/buttonClick.svg", alt="")
-							.projinf-target__text Увеличение количества заказов с сайта
-						.projinf-target
-							.projinf-target__pic-wrap
-								img(src="img/caseitem/gear.svg", alt="")
-							.projinf-target__text Оптимизация бюджета на рекламные компании
+		.project-info-block
+			h2.ci-h2.projinf-title Информация о проекте
+			.projinf-flex
+				a.projinf-logo-wrap(href="")
+					img.projinf-logo(src="img/caseitem/willed-logo.png", alt="")
+				.projinf-client-description
+					.projinf-client-description__title О клиенте
+					.projinf-client-description__text Мебельная сеть Willed предлагает услуги по предоставлени мебельных решений и их доставке в различных отправлений. Компания осуществляет доставку в любую точку мира, принимая заказы как от компаний, так и от частных лиц. На сегодняшний день представлено более 80 собственных представительств компании.
+					.projinf-client-flex
+						.projinf-client-flex-item
+							.projinf-client-flex-item__top Тип услуги
+							.projinf-client-flex-item__bottom Контекстная реклама
+						.projinf-client-flex-item
+							.projinf-client-flex-item__top Направление
+							.projinf-client-flex-item__bottom Интернет-магазины
+						.projinf-client-flex-item
+							.projinf-client-flex-item__top Регион
+							.projinf-client-flex-item__bottom Вся Россия
+						.projinf-client-flex-item
+							.projinf-client-flex-item__top
+							.projinf-client-flex-item__bottom
+								a(href="www.willed.ru") www.willed.ru
 
-			img/caseitem/CaseItem_Page-2.jpg
-
+			.projinf-targets-wrap
+				.projinf-targets-title Цели рекламной компании
+				.projinf-targets-flex
+					.projinf-target
+						.projinf-target__pic-wrap
+							img(src="img/caseitem/stats.svg", alt="")
+						.projinf-target__text Повышение заявок и&nbsp;звонков
+					.projinf-target
+						.projinf-target__pic-wrap
+							img(src="img/caseitem/conversion.svg", alt="")
+						.projinf-target__text Увеличение конверсионных показателей
+					.projinf-target
+						.projinf-target__pic-wrap
+							img(src="img/caseitem/buttonClick.svg", alt="")
+						.projinf-target__text Увеличение количества заказов с сайта
+					.projinf-target
+						.projinf-target__pic-wrap
+							img(src="img/caseitem/gear.svg", alt="")
+						.projinf-target__text Оптимизация бюджета на&nbsp;рекламные компании
 
 
-		+blogitemPageMain()
+	.ci-results-section
+		.container.ci-results-title-wrap
+			h2.ci-h2.ci-results-title Результаты
+		.ci-results-block
+			.ci-results-bbg
+				.ci-results-bbg__inner
+					img(src="img/caseitem/CaseItem_Page-2.jpg", alt="")
+			.container.ci-results-block__container
+				.ci-result-slider__wrap
+					.ci-result-slider.slider-dots-style-1.red-square-list.js-ci-result-slider
+						.ci-result-slide
+							h3 Разработка стратегии
+							p Для компании «Willed» была разработана стратегия, которая учитывала сезонность спроса, конкуренцию и рекламные бюджеты.
+							ul
+								li Созданы рекламные кампании с узкими геотаргетингом по регионам
 
+								li Разработаны кампании по ремаркетингу и брендовым запросам на тематических площадках
+						.ci-result-slide
+							h3 Разработка стратегии2
+							p Для компании «Willed» была разработана стратегия, которая учитывала сезонность спроса, конкуренцию и рекламные бюджеты.
+							ul
+								li Созданы рекламные кампании с узкими геотаргетингом по регионам
+
+								li Разработаны кампании по ремаркетингу и брендовым запросам на тематических площадках
+						.ci-result-slide
+							h3 Разработка стратегии3
+							p Для компании «Willed» была разработана стратегия, которая учитывала сезонность спроса, конкуренцию и рекламные бюджеты.
+							ul
+								li Созданы рекламные кампании с узкими геотаргетингом по регионам
+
+								li Разработаны кампании по ремаркетингу и брендовым запросам на тематических площадках
+						.ci-result-slide
+							h3 Разработка стратегии4
+							p Для компании «Willed» была разработана стратегия, которая учитывала сезонность спроса, конкуренцию и рекламные бюджеты.
+							ul
+								li Созданы рекламные кампании с узкими геотаргетингом по регионам
+
+								li Разработаны кампании по ремаркетингу и брендовым запросам на тематических площадках
+						.ci-result-slide
+							h3 Разработка стратегии5
+							p Для компании «Willed» была разработана стратегия, которая учитывала сезонность спроса, конкуренцию и рекламные бюджеты.
+							ul
+								li Созданы рекламные кампании с узкими геотаргетингом по регионам
+
+								li Разработаны кампании по ремаркетингу и брендовым запросам на тематических площадках
+
+
+
+
+	.container.ci-features-block
+		h2.ci-h2 Особенности проекта
+		.bi-main-rows-wrap.bi-main-rows-wrap--ci-features
+				.bi-main-row
+					.bi-main-row__content.bi-main-text-style
+						p Группа компаний «Экостандарт» занимается аудитом и оценкой охраны труда, экологическими экспертизами и проектированием, инженерными изысканиями (выбором проектных решений при строительстве), сертификацией. Это сложная тематика, в которой информацию по одним и тем же запросам ищут и для того, чтобы выполнить работу самостоятельно, и для того, чтобы обратиться к специалистам.
+						p В основном в этой сфере ключевые запросы информационные:
+						ul
+							li оценка условий труда — скорее информационный;
+							li соут — скорее информационный;
+							li соут организации — скорее информационный.
+						p Либо находятся на грани между коммерческими и информационными:
+						ul
+							li аудит охраны труда — скорее коммерческий, чем информационный;
+							li проведение соут — скорее коммерческий, чем информационный;
+							li оценка соут — скорее коммерческий, чем информационный.
+						p
+						a(href="") По исследованиям
+						| , выйти в топ по информационным запросам могут только информационные страницы. Если запрос высокочастотный, то на первых местах в выдаче будут крупные информационные порталы, такие, как «Википедия». В этой тематике это «Консультант», «Гарант» и так далее:
+						img(src="img/caseitem/search-res.jpg", alt="")
+						p  Пробиться перед ними почти невозможно, да и после них идут информационные сайты хоть и немного меньшие по объему, но тоже очень авторитетные в глазах поисковиков.
+						p С этим можно смириться, и даже не претендовать на места в топе: ни один коммерческий сайт не сравнится с информационным, собравшим тысячи, если не десятки тысяч полезных страниц. Однако, как ни странно, у коммерческих сайтов в этой ситуации есть преимущество.
+					.bi-main-row__sidebar
+
+
+				.bi-main-row
+					.bi-main-row__content
+						.bi-main-after-rows
+							.bi-main-after-rows__tags
+								a(href="") SEO,
+								a(href="") факторы ранжирования,
+								a(href="") Яндекс,
+								a(href="") Google
+							.bi-main-after-rows__date 24 апреля 2020 г.
+					.bi-main-row__sidebar
 	+bipInteresting(blogitemPage.bipInteresting)
 
 	+followOurNews()

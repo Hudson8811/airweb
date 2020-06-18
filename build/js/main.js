@@ -193,3 +193,13 @@ $(document).ready(function () {
 		$('.stage__progress-current').css('max-width', 'calc(100% / ' + dotLength + ' * ' + ($('.custom-dot--seo').parent('.slick-active').index() + 1) + ')');
 	}
 });
+$(document).ready(function () {
+    if ($('.js-ci-result-slider').length > 0) {
+        $('.js-ci-result-slider').slick({
+            arrows: true,
+            dots: true,
+            prevArrow: '<div class="ci-results-arrow ci-results-arrow--prev"></div>',
+            nextArrow: '<div class="ci-results-arrow ci-results-arrow--next"></div>'
+        });
+    }
+});
