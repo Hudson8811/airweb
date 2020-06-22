@@ -1,1 +1,93 @@
+@media (min-width: 1280px) {
+    .feedback__form--caseitem {
+        width: calc(50% - 240px);
+    }
 
+}
+
+
+@media (min-width: 1000px) {
+    .feedback--caseitemp .feedback__container {
+        padding: 99px 20px 86px;
+    }
+}
+
+
+//tablet-max
+@media screen and (max-width: $tabMax) {
+    .projinf-target {
+        width: calc(50% - 10px);
+    }
+}
+
+
+@media screen and (max-width: 785px) {
+    .simcas-item{
+        display: flex;
+        flex-direction: column;
+    }
+    .simcas-item-text{
+        width: 100%;
+        min-height: unset;
+        padding: 30px;
+    }
+    .simcas-item-advantages{
+        width: 100%;
+    }
+    .simcas-item-advantages__content{
+        padding-bottom: 0;
+    }
+    .simcas-item:nth-child(2n) .simcas-item-text{
+        order: 0;
+    }
+}
+
+
+//mobile-max
+@media screen and (max-width: $mobMax) {
+    .projinf-flex{
+        flex-direction: column;
+    }
+    .projinf-logo-wrap{
+        width: 100%;
+    }
+    .projinf-client-description{
+        margin-top: 30px;
+    }
+    .projinf-target {
+        width: 100%;
+    }
+    .simcas-item-text__title{
+        font-size: 28px;
+    }
+    .bi-pts-content--caseitem {
+        position: relative;
+        z-index: 3;
+        padding-top: 32px;
+        padding-bottom: 96px;
+    }.ci-results-section {
+        margin-top: 35px;
+    }
+    .ci-h2{
+        font-size: 30px;
+    }.simcas-container {
+        padding-top: 80px;
+    }
+    .simcas-item-advantages{
+        padding: 20px;
+    }
+    .simcas-item-text{
+        padding: 20px;
+    }.ci-result-slider__wrap{
+        padding: 20px;
+    }
+
+   .slider-dots-style-1 .slick-dots{
+        padding-left: 0;
+        justify-content: center;
+        margin-top: 27px;
+    }
+    .ci-results-arrow{
+        display: none !important;
+    }
+}

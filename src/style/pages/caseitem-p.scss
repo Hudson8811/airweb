@@ -355,8 +355,8 @@
 
 	svg {
 		display: block;
-		width: 11px;
-		height: 16px;
+		width: 32px;
+		height: 33px;
 	}
 
 	&--prev {
@@ -401,7 +401,6 @@
 	left: 0;
 	overflow: hidden;
 	height: 100%;
-	transform: skew(0, -3deg);
 	transform-origin: top right;
 
 	.simcas-bg-inner {
@@ -413,14 +412,14 @@
 		left: 0;
 		overflow: hidden;
 		height: 100%;
-		transform: skew(0, 6deg);
+		transform: skew(0, -3deg);
 		transform-origin: bottom right;
 	}
 }
 
 .simcas-container {
 	padding-top: 133px;
-	padding-bottom: 100px;
+	padding-bottom: 19px;
 	z-index: 2;
 	position: relative;
 
@@ -517,7 +516,7 @@
 	flex-direction: column;
 	justify-content: center;
 	height: 100%;
-	padding-top: 45px;
+	padding-top: 60px;
 	padding-bottom: 13%;
 	box-sizing: border-box;
 }
@@ -550,6 +549,7 @@
 
 .simcas-advantages__results-flex {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: center;
 	margin-top: 24px;
 }
@@ -563,6 +563,7 @@
 	max-width: 205px;
 	font-weight: 300;
 	line-height: 21.86px;
+	margin-bottom: 10px;
 }
 
 .simcas-advantages-result__percent {
@@ -573,3 +574,19 @@
 }
 
 .simcas-advantages-result__type {margin-top: 10px;}
+
+
+.feedback--caseitemp{
+	background-color: #f1f3f8;
+}
+
+.feedback-btn-submit--caseitem{
+	margin-top: 33px !important;font-weight: 300;
+}
+.feedback__form--caseitem{
+	padding-bottom: 59px !important;
+}
+
+.feedback__desc--caseitem {
+    padding: 17px 0 32px;
+}

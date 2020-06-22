@@ -31,3 +31,11 @@ $m320: 320px;
 $tMin: 768px;
 $dMin: 1000px;
 $d1280: 1280px;
+$mobMax: 767px;
+$tabMax: 999px;
+
+
+//tablet-max
+@media screen and (max-width: $tabMax){}
+//mobile-max
+@media screen and (max-width: $mobMax){}

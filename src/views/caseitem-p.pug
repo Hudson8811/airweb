@@ -223,8 +223,22 @@ block main
 									.simcas-advantages-result__type Стоимость клика
 
 
+	.feedback.feedback--caseitemp
+		.feedback__wrapper
+			img.picture__img.feedback__img(src='./img/bg-macbook.jpg' alt='bg-macbook')
+		.container.feedback__container
+			.form.feedback__form.feedback__form--caseitem
+				.form__title ХОЧУ ТАКЖЕ
+				.form__subtitle Подготовим коммерческое предложение в течение 30 минут
+				form(action='/' method='POST')
+					input.input(type='text' name='name' placeholder='Фамилия Имя Отчество')
+					input.input(type='text' name='phone' placeholder='+7 (___) ___-__-__')
+					input.input(type='email' name='email' placeholder='Ваш email')
+					input.form__button.feedback-btn-submit--caseitem(type='submit' value='Отправить')
+			.feedback__info
+				.feedback__title Если Вы не уверены, какие услуги необходимы для Вашего бизнеса
+				.feedback__desc.feedback__desc--caseitem Воспользуйтесь  #[a(href="") формой]  обратного звонка. Мы перезвоним в&nbsp;течении 15 минут и поможем найти наиболе подходящее  решение для вашей проблемы
+				.feedback__privacy Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
 
 
-	+followOurNews()
 	+map()
-
