@@ -59,17 +59,78 @@
 		}
 	}
 
+	&__advantages {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		margin: 26px 0;
+
+		@media (min-width: $d1280) {
+			flex-direction: row;
+			margin: 26px 0 40px;
+		}
+	}
+
+	&__advantages-col {
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: 15px;
+		margin-right: -20px;
+		justify-content: center;
+
+		@media (min-width: $d1280) {
+			margin-top: 0;
+			margin-right: -60px;
+			justify-content: flex-end;
+			width: 50%;
+		}
+	}
+
+	&__advantages-item {
+		max-width: 130px;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 20px;
+		margin-right: 20px;
+
+		@media (min-width: $dMin) {
+			max-width: 200px;
+			margin-bottom: 0;
+			margin-right: 60px;
+		}
+	}
+
+	&__advantages-item-percent {
+		font-size: 36px;
+		font-weight: 400;
+		line-height: 38px;
+		text-transform: uppercase;
+
+		@media (min-width: $dMin) {
+			font-size: 50px;
+			line-height: 52px;
+		}
+	}
+
+	&__advantages-item-text {
+		font-size: 16px;
+		line-height: 26px;
+
+		@media (min-width: $dMin) {
+			font-size: 18px;
+			line-height: 32px;
+		}
+	}
+
 	&__desc {
 		font-size: 16px;
 		line-height: 26px;
-		margin: 26px 0 36px;
 		max-width: 922px;
 		width: 100%;
 
 		@media (min-width: $dMin) {
 			font-size: 16px;
 			line-height: 28px;
-			margin: 37px 0 66px;
 		}
 
 		@media (min-width: $d1280) {
@@ -143,18 +204,39 @@
 	&--seo-service {
 		.first-screen {
 			&__container {
-				padding: 160px 0 70px;
+				padding: 100px 0 40px;
+
+				@media (min-width: $dMin) {
+					padding: 160px 0 70px;
+				}
+			}
+			
+			&__title,
+			&__desc {
+				text-align: center;
+
+				@media (min-width: $dMin) {
+					text-align: left;
+				}
 			}
 
 			&__desc {
-				margin: 26px 0 40px;
-				max-width: 680px;
+				@media (min-width: $dMin) {
+					max-width: 680px;
+				}
 			}
 
 			&__button {
-				font-size: 24px;
-				padding: 30px 56px;
+				font-size: 18px;
+				padding: 26px 12px;
+				margin: 0 auto;
 				border-radius: 10px;
+
+				@media (min-width: $dMin) {
+					font-size: 24px;
+					padding: 30px 56px;
+					margin: 0;
+				}
 			}
 		}
 	}

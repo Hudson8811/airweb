@@ -1,6 +1,6 @@
 include ../components/container.pug
 include ../partials/title.pug
-include ../components/picture
+include ../components/picture.pug
 
 mixin expert(data)
 	.expert
@@ -19,7 +19,8 @@ mixin expert(data)
 							.expert__rating-item-top
 								.expert__rating-item-num 1
 								.expert__rating-item-wrapper
-									svg
-										use(xlink:href='./svg/sprite.svg#crown')
+									.expert__rating-item-icon
+										svg
+											use(xlink:href='./svg/sprite.svg#crown')
 									.expert__rating-item-place Место
 							.expert__rating-item-text= item

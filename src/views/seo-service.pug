@@ -7,6 +7,9 @@ include partials/expert.pug
 include partials/case.pug
 include partials/about.pug
 include partials/clients.pug
+include partials/profit.pug
+include partials/price/price.pug
+include partials/project-group.pug
 
 block vars
 
@@ -15,7 +18,10 @@ block main
 	+expert(seoService.expert)
 	+case(seoService.case, 'case--seo-service')
 	+stage(seoService.stage)
-	//+about(seoService.about)
+	+profit(seoService.profit)
+	+price(seoService.price)
+	+project-group(seoService.projectGroup)
+	+about(seoService.about)
 	+clients(seoService.clients)
 	+feedback(seoService.feedback)
 	+map()

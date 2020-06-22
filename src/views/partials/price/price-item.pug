@@ -1,0 +1,18 @@
+include ../../components/button.pug
+
+mixin price-item(data)
+	.price-item&attributes(data.active)
+		.price-item__top
+			.price-item__type= data.type
+			.price-item__type-for!= data.typeFor
+		ul.price-item__list
+			each item in data.include
+				li.price-item__include
+					svg
+						use(xlink:href='./svg/sprite.svg#check')
+					.price-item__include-text= item
+		.price-item__bottom
+			.price-item__cost!= data.bottom.cost
+			.price-item__period!= data.bottom.period
+			.price-item__other!= data.bottom.other
+			+button(data.bottom.button, 'price-item__button')

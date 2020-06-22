@@ -4,8 +4,8 @@ include ../components/picture
 
 mixin stage(data)
 	.stage
+		+title(data.title)
 		+container()
-			+title(data.title)
 			.stage__progress
 				.stage__progress-all
 				.stage__progress-current

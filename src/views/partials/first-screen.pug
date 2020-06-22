@@ -11,5 +11,12 @@ mixin first-screen(data, classMod)
 				each slide in data.slides
 					.first-screen__slide
 						.first-screen__title= slide.title
-						.first-screen__desc= slide.desc
+						.first-screen__advantages
+							.first-screen__desc= slide.desc
+							if slide.advantages
+								.first-screen__advantages-col
+									each item in slide.advantages
+										.first-screen__advantages-item
+											.first-screen__advantages-item-percent= item.percent
+											.first-screen__advantages-item-text= item.text
 						+button(slide.button, 'first-screen__button')

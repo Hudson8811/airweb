@@ -50,4 +50,13 @@
 			border: none;
 		}
 	}
+
+	&--white {
+		.title {
+			&__text,
+			&__subtitle {
+				color: $white;
+			}
+		}
+	}
 }

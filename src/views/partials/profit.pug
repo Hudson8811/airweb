@@ -1,0 +1,15 @@
+include ../components/container.pug
+include ../partials/title.pug
+include ../components/picture.pug
+
+mixin profit(data)
+	.profit
+		+title(data.title)
+		+container()
+			.profit__wrapper
+				each item in data.getIt
+					.profit__item
+						.profit__icon
+							svg
+								use(xlink:href=`./svg/sprite.svg#${item.icon}`)
+						.profit__text= item.text

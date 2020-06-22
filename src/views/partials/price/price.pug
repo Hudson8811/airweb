@@ -1,0 +1,14 @@
+include ../../components/container.pug
+include ../../partials/title.pug
+include ../../components/picture.pug
+include price-item.pug
+
+mixin price(data)
+	.price
+		+title(data.title, 'title--white')
+		.price__bg
+			+picture(data.img, 'price__img')
+		+container()
+			.price__wrapper
+				each item in data.prices
+					+price-item(item)

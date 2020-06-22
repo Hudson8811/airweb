@@ -192,4 +192,25 @@ $(document).ready(function () {
 	function moveSlideProgress() {
 		$('.stage__progress-current').css('max-width', 'calc(100% / ' + dotLength + ' * ' + ($('.custom-dot--seo').parent('.slick-active').index() + 1) + ')');
 	}
+
+	$('.project-group__slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		prevArrow: '<button class="custom-arrow custom-arrow-prev project-group__custom-arrow-prev" aria-hidden="true"><span></span></button>',
+		nextArrow: '<button class="custom-arrow custom-arrow-next project-group__custom-arrow-next" aria-hidden="true"><span></span></button>',
+		dots: true,
+		dotsClass: "custom-dots project-group__custom-dots",
+		customPaging: function() {
+			return '<button class="custom-dot"></button>';
+		},
+		infinite: true,
+		responsive: [
+			{
+				breakpoint: 1000,
+				settings: {
+					arrows: false
+				}
+			}
+		]
+	});
 });

@@ -1,0 +1,18 @@
+include ../components/container.pug
+include ../partials/title.pug
+include ../components/picture.pug
+
+mixin project-group(data)
+	.project-group
+		+title(data.title)
+		+container('project-group__container')
+			.project-group__slider
+				each slide in data.employee
+					.project-group__slide
+						.project-group__wrapper
+							.project-group__employee-img
+								+picture(slide.img, 'project-group__img')
+							.project-group__employee
+								.project-group__name= slide.name
+								.project-group__position= slide.position
+								.project-group__desc= slide.desc
