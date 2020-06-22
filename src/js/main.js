@@ -14,3 +14,4 @@
 //= partials/form.js
 //= partials/index.js
 //= partials/seo-service.js
+//= partials/caseitem.js

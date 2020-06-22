@@ -49,17 +49,18 @@ var path = {
 		img: 'src/static/img/**/*.*',
 		svg: 'src/static/svg/*.svg',
 		fonts: 'src/fonts/**/*.*',
-		data: 'src/data/**/*.*'
+		//data: ['src/data/**/*.*','!src/data/combined.json']
 	},
 	clean: './build'
 };
 
 var config = {
 	server: {
-		baseDir: "./build"
+		baseDir: "./build",
+		directory: true
 	},
 	//tunnel: true,
-	directory: true,
+	//directory: true,
 	host: 'localhost',
 	port: 9000,
 	logPrefix: "PipZip"
@@ -175,7 +176,7 @@ gulp.task('build', gulp.parallel('html:build', 'js:build', 'style:build', 'fonts
 
 gulp.task('watch', function(){
 	gulp.watch([path.watch.html], gulp.series("html:build"));
-	gulp.watch([path.watch.data], gulp.series("html:build"));
+	//gulp.watch(path.watch.data, gulp.series("html:build"));
 	gulp.watch([path.watch.style], gulp.series("style:build"));
 	gulp.watch([path.watch.js], gulp.series("js:build"));
 	gulp.watch([path.watch.img], gulp.series("img:build"));

@@ -1,0 +1,10 @@
+.title__tags--big {}
+
+.title__tag--big {
+    font-size: 18px;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    &:not(:last-child) {
+    margin-right: 15px;
+}
+}

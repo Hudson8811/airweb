@@ -1,0 +1,115 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/catalog/catalog.pug
+include partials/title.pug
+
+block vars
+
+block main
+	.container
+		nav.breadcrumbs
+			li
+				a.breadcrumbs__link(href='#') Главная
+				.breadcrumbs__arrow
+			li
+				span.breadcrumbs__link.breadcrumbs__link--span Кейсы
+		.title__text Кейсы "Аир"
+		.title__tags.title__tags--big
+			a.button.title__tag.title__tag--big.title__tag--active(href='#') Все услуги
+			a.button.title__tag.title__tag--big(href='#') Контекстная реклама
+			a.button.title__tag.title__tag--big(href='#') SEO продвижение
+			a.button.title__tag.title__tag--big(href='#') Таргетированная реклама
+			a.button.title__tag.title__tag--big(href='#') Создание сайтов
+		.title__tags
+
+			a.button.title__tag.title__tag--active(href='#') Все направления
+			a.button.title__tag(href='#') Строительство
+			a.button.title__tag(href='#') Медицина
+			a.button.title__tag(href='#') Недвижимость
+			a.button.title__tag(href='#') Транспортные услуги
+			a.button.title__tag(href='#') Интернет-магазины
+			a.button.title__tag(href='#') B2B-услуги
+			a.button.title__tag(href='#') Туризм
+
+
+	.similar-cases-section
+		.simcas-bg
+			.simcas-bg-inner
+		.container.simcas-container
+			.simcas-block
+				.simcas-item
+					.simcas-item-text
+						a.simcas-item-text__site(href="" target="_blank") www.oknagris.ru
+						h3.simcas-item-text__title Окна ГРИС
+						.simcas-item-text__subtitle Экологически чистые деревянные окна
+						h4.simcas-item-text__h4 Что сделали:
+						p.simcas-item-text__p Создали компании для рекламы брендов. Настроили Яндекс Директ и Google Adwords. Подключили BID-менеджер
+						a.button.button--arrow.button--simcas-more(href="")
+							span Подробнее
+					.simcas-item-advantages(style="background-image:url(img/caseitem/case-1.jpg)")
+						.simcas-item-advantages__content
+							.simcas-advantages__type Интернет-магазины
+							.simcas-advantages__actions Контекстная реклама
+							.simcas-advantages__results-flex
+								.simcas-advantages-result
+									.simcas-advantages-result__percent +380%
+									.simcas-advantages-result__type число монтажей
+								.simcas-advantages-result
+									.simcas-advantages-result__percent -270%
+									.simcas-advantages-result__type стоимость одного обращения
+
+				.simcas-item
+					.simcas-item-text
+						a.simcas-item-text__site(href="" target="_blank") www.nordw.ru
+						h3.simcas-item-text__title NORD WHEEL
+						.simcas-item-text__subtitle Транспортная компания
+						h4.simcas-item-text__h4 Что сделали:
+						p.simcas-item-text__p Создали компании для рекламы брендов. Настроили Яндекс Директ и Google Adwords. Подключили BID-менеджер
+						a.button.button--arrow.button--simcas-more(href="")
+							span Подробнее
+					.simcas-item-advantages(style="background-image:url(img/caseitem/case-2.jpg)")
+						.simcas-item-advantages__content
+							.simcas-advantages__type Интернет-магазины
+							.simcas-advantages__logo
+								img(src="img/caseitem/nw-logo.png", alt="")
+							.simcas-advantages__actions поисковое продвижение, поисковый аудит
+							.simcas-advantages__results-flex
+								.simcas-advantages-result
+									.simcas-advantages-result__percent +260%
+									.simcas-advantages-result__type трафика на сайт
+								.simcas-advantages-result
+									.simcas-advantages-result__percent +390%
+									.simcas-advantages-result__type увеличение количества заказов
+								.simcas-advantages-result
+									.simcas-advantages-result__percent -250%
+									.simcas-advantages-result__type Стоимость клика
+
+				.simcas-item
+					.simcas-item-text
+						a.simcas-item-text__site(href="" target="_blank") www.namelnitse.ru
+						h3.simcas-item-text__title На мельнице
+						.simcas-item-text__subtitle Ресторан русской кухни
+						h4.simcas-item-text__h4 Что сделали:
+						p.simcas-item-text__p Создали компании для рекламы брендов. Настроили Яндекс Директ и Google Adwords. Подключили BID-менеджер
+						a.button.button--arrow.button--simcas-more(href="")
+							span Подробнее
+					.simcas-item-advantages(style="background-image:url(img/caseitem/case-3.jpg)")
+						.simcas-item-advantages__content
+							.simcas-advantages__type Интернет-магазины
+							.simcas-advantages__actions поисковое продвижение, поисковый аудит
+							.simcas-advantages__results-flex
+								.simcas-advantages-result
+									.simcas-advantages-result__percent +510%
+									.simcas-advantages-result__type трафика на сайт
+								.simcas-advantages-result
+									.simcas-advantages-result__percent +69%
+									.simcas-advantages-result__type увеличение количества заказов
+								.simcas-advantages-result
+									.simcas-advantages-result__percent -250%
+									.simcas-advantages-result__type Стоимость клика
+			.simcas-smorebtn-wrap
+				btn.button.simcas-smorebtn Показать ещё
+
+	+feedback(casesCatalog.feedback)
+	+map()
