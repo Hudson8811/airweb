@@ -1,0 +1,27 @@
+//tablet-max
+@media screen and (max-width: $tabMax) {
+    .title__tag--big {
+        font-size: 17px;
+        padding: 7px 20px;
+        margin-bottom: 12px;
+    }
+    .title__tag--big:not(:last-child) {
+        margin-right: 12px;
+    }
+}
+
+//mobile-max
+@media screen and (max-width: $mobMax) {
+    .title__tag--big {
+        font-size: 15px;
+        padding: 5px 14px;
+        margin-bottom: 9px;
+    }
+    .title__tag--big:not(:last-child) {
+        margin-right: 9px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .title__tag--big{
+    }
+}
