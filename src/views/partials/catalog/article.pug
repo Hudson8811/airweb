@@ -2,14 +2,14 @@ include ../../components/button.pug
 include ../../components/picture.pug
 
 mixin article(data)
-	.article(class= 'article--' + data.size)
+	.article(class= 'article--' + data.size, style=`background-color: ${data.bgColor};`)
 		if data.img
 			.article__picture
 				+picture(data.img, 'article__img')
 		.article__wrapper
 			if data.tag
 				.article__tags= data.tag
-			.article__title= data.title
+			.article__title(style=`color: ${data.textColor};`)= data.title
 			if data.desc
 				.article__desc!= data.desc
 			if data.more

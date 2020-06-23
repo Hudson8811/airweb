@@ -1,0 +1,13 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/catalog/services.pug
+include partials/title.pug
+
+block vars
+
+block main
+	+title(serviceCatalog.title)
+	+services(serviceCatalog.services, 'services--color')
+	+feedback(serviceCatalog.feedback)
+	+map()
