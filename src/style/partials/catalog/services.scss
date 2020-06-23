@@ -43,41 +43,24 @@
 		background-color: $black-23;
 		margin-bottom: 25px;
 
-		&__xsmall-wrapper {
-			&:nth-child(5) {
-				.article {
-					background-color: #363241;
-
-					&:last-child {
-						background-color: $gray-e2;
-
-						.article__title {
-							color: $light-black;
-						}
-					}
-				}
-			}
-
-			&:nth-child(6) {
-				.article {
-					background-color: $gray-e2;
-
-					&:first-child {
-						.article__title {
-							color: $light-black;
-						}
-					}
-
-					&:last-child {
-						background-color: $red;
-					}
-				}
-			}
-		}
-
 		&--xsmall {
 			.article__title {
 				max-width: 220px;
+			}
+		}
+	}
+
+	&--color {
+		background-color: $white;
+		padding: 30px 0 60px;
+
+		&::after {
+			display: none;
+		}
+
+		.services {
+			&__articles {
+				margin-top: 0;
 			}
 		}
 	}

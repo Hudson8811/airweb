@@ -3,9 +3,10 @@ include ../../components/container.pug
 include ../../partials/title.pug
 include ../../components/button.pug
 
-mixin services(data)
-	.services
-		+title(data.title)
+mixin services(data, mod)
+	.services(class=mod)
+		if data.title
+			+title(data.title)
 		+container('services__container')
 			.services__articles
 				- for (var i = 0; i < data.articles.length; i++) {
@@ -17,4 +18,5 @@ mixin services(data)
 						else
 							+article(data.articles[i])
 				- }
-		+button(data.button, 'button--arrow services__button')
+		if data.button
+			+button(data.button, 'button--arrow services__button')
