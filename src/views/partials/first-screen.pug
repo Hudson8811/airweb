@@ -19,4 +19,5 @@ mixin first-screen(data, classMod)
 										.first-screen__advantages-item
 											.first-screen__advantages-item-percent= item.percent
 											.first-screen__advantages-item-text= item.text
-						+button(slide.button, 'first-screen__button')
+						if slide.button
+							+button(slide.button, 'first-screen__button')

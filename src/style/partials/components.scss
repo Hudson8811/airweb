@@ -21,6 +21,10 @@
 	cursor: pointer;
 	position: relative;
 
+	svg {
+		margin-left: 5px;
+	}
+
 	&--arrow {
 		padding: 10px 41px 9px 23px;
 		box-shadow: 0 6px 10px rgba(221, 32, 54, 0.2);
@@ -46,7 +50,7 @@
 			}
 
 			&::after {
-				top: 44%;
+				top: 40%;
 				transform: translate(0, -44%) rotate(45deg);
 			}
 		}

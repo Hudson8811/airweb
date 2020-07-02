@@ -1,0 +1,19 @@
+include ../components/container.pug
+include ../components/button.pug
+
+mixin history(data)
+	.history
+		+container('history__container')
+			.history__top
+				.history__bg
+					+picture(data.img, 'history__img')
+				.history__content
+					.history__title= data.title
+					.history__desc!= data.desc
+			.history__chronology
+				ul.history__list
+					each item, index in data.years
+						li.history__list-item(class=(index > 4 ? 'history__list-item--hide' : ''))
+							.history__year= item.year
+							.history__text!= item.text
+					+button(data.button, 'history__button', 'arrow-down')

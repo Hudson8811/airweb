@@ -4,8 +4,8 @@ include ../components/picture.pug
 
 mixin expert(data)
 	.expert
+		+title(data.title)
 		+container()
-			+title(data.title)
 			.expert__outer
 				.expert__about
 					.expert__text!= data.text

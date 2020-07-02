@@ -1,0 +1,17 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+include partials/title.pug
+include partials/philosophy.pug
+include partials/history.pug
+
+block vars
+
+block main
+	+first-screen(aboutPage.firstScreen, 'first-screen--history')
+	+title(aboutPage.title, 'title--philosophy')
+	+philosophy(aboutPage.philosophy)
+	+history(aboutPage.history)
+	+feedback(aboutPage.feedback)
+	+map()

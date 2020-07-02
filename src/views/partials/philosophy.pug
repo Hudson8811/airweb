@@ -1,0 +1,13 @@
+include ../components/container.pug
+
+mixin philosophy(data)
+	.philosophy
+		+container('philosophy__container')
+			.philosophy__left
+				.philosophy__title= data.title
+				.philosophy__desc= data.desc
+			.philosophy__right
+				each item in data.achievements
+					.philosophy__item
+						.philosophy__item-title= item.title
+						.philosophy__item-text!= item.text

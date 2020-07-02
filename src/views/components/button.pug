@@ -1,4 +1,4 @@
-mixin button(data, className)
+mixin button(data, className, icon)
 	if(data && data.href && data.text)
 		if(data.span && data.span==="true")
 			a.button(href=data.href, class=className)
@@ -8,3 +8,6 @@ mixin button(data, className)
 	else
 		button.button(class=className)
 			span= ((data && data.text)? data.text: 'Подробнее')
+			if icon
+				svg
+					use(xlink:href=`./svg/sprite.svg#${icon}`)

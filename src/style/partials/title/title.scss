@@ -59,4 +59,12 @@
 			}
 		}
 	}
+
+	&--philosophy {
+		margin: 63px 0 23px;
+
+		@media (min-width: $dMin) {
+			margin: 93px 0 53px;
+		}
+	}
 }

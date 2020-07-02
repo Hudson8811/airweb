@@ -102,6 +102,7 @@
 			},
 			{
 				"size": "xsmall",
+				"bgColor": "#363241",
 				"img": {
 					"dir": "services",
 					"name": "services-5",
@@ -111,6 +112,8 @@
 			},
 			{
 				"size": "xsmall",
+				"bgColor": "#e2e3e6",
+				"textColor": "#212224",
 				"img": {
 					"dir": "services",
 					"name": "services-6",
@@ -120,6 +123,8 @@
 			},
 			{
 				"size": "xsmall",
+				"bgColor": "#e2e3e6",
+				"textColor": "#212224",
 				"img": {
 					"dir": "services",
 					"name": "services-7",
@@ -129,6 +134,7 @@
 			},
 			{
 				"size": "xsmall",
+				"bgColor": "#dd2036",
 				"img": {
 					"dir": "services",
 					"name": "services-8",
