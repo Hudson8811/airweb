@@ -1,0 +1,14 @@
+include ../components/container.pug
+include ../components/picture
+
+mixin team(data)
+	.team
+		each item in data.person
+			.team__person
+				+container('team__container')
+					.team__photo
+						+picture(item.img, 'team__img')
+					.team__content
+						.team__name= item.name
+						.team__position= item.position
+						.team__desc!= item.desc

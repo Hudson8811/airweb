@@ -14,7 +14,7 @@ mixin article(data)
 				.article__desc!= data.desc
 			if data.more
 				.article__more
-					+button(data.btn, 'button--arrow article__button')
+					+button(data.more.btn, 'button--arrow article__button')
 					if data.more.date
 						.article__date= data.more.date
 					if data.more.price

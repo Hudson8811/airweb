@@ -67,4 +67,41 @@
 			margin: 93px 0 53px;
 		}
 	}
+
+	&--team {
+		margin-top: 53px;
+
+		@media (min-width: $dMin) {
+			margin-top: 93px;
+		}
+
+		.title__text {
+			margin-top: 23px;
+			margin-bottom: 26px;
+
+			@media (min-width: $dMin) {
+				margin-top: 53px;
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&--comments {
+		margin-top: 93px;
+
+		.title {
+			&__text {
+				margin-top: 53px;
+				margin-bottom: 30px;
+			}
+
+			&__tag {
+				padding: 11px 30px;
+
+				&:not(:last-child) {
+					margin-right: 16px;
+				}
+			}
+		}
+	}
 }

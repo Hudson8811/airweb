@@ -1,0 +1,121 @@
+.team {
+	&__person {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+
+			@media (min-width: $dMin) {
+				margin-bottom: 48px;
+			}
+		}
+
+		&:nth-child(odd) {
+			@media (min-width: $dMin) {
+				padding-top: 36px;
+			}
+		}
+
+		&:nth-child(even) {
+			background-color: $light-gray;
+			padding: 40px 0 35px;
+
+			@media (min-width: $dMin) {
+				padding: 92px 0 35px;
+			}
+
+			&::after {
+				content: '';
+				display: none;
+				width: 100%;
+				height: 50px;
+				position: absolute;
+				left: 0;
+				bottom: -50px;
+				background: linear-gradient(to bottom left, $light-gray 50%, $white 50%);
+
+				@media (min-width: $dMin) {
+					display: block;
+					height: 100px;
+					bottom: -100px;
+				}
+			}
+		}
+
+		&:last-child {
+			padding-bottom: 30px;
+
+			@media (min-width: $dMin) {
+				padding-bottom: 98px;
+			}
+
+			&::after {
+				display: block;
+			}
+		}
+	}
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@media (min-width: $dMin) {
+			flex-direction: row;
+		}
+	}
+
+	&__photo {
+		max-width: 296px;
+		width: 100%;
+
+		@media (min-width: $dMin) {
+			margin-right: 25px;
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__content {
+		margin-top: 10px;
+
+		@media (min-width: $dMin) {
+			padding-bottom: 35px;
+			margin-top: 0;
+		}
+	}
+
+	&__name {
+		font-size: 30px;
+		text-align: center;
+
+		@media (min-width: $dMin) {
+			text-align: left;
+		}
+	}
+
+	&__position {
+		font-size: 18px;
+		color: $red;
+		text-align: center;
+
+		@media (min-width: $dMin) {
+			text-align: left;
+		}
+	}
+
+	&__desc {
+		font-size: 16px;
+		line-height: 24px;
+		margin-top: 14px;
+		max-width: 785px;
+
+		p {
+			margin-top: 22px;
+		}
+	}
+}

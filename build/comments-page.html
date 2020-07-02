@@ -100,65 +100,95 @@
           </div>
         </header>
     <main class="main">
-      <div class="blogitem-page-top-sec">
-        <div class="bi-pts-bg"><img src="img/discount/DiscountItem_Page.jpg"></div>
-        <div class="bi-pts-content">
-          <div class="container">
-            <h1 class="bi-pts-title">Партнеры</h1>
-            <div class="bi-pts-text">Компания «АИР» основана в 2011 году ведущими российскими специалистами в области интернет-маркетинга, разработки программного обеспечения, управления проектами, искусственного интеллекта и прикладной лингвистики.</div>
-          </div>
+      <div class="first-screen first-screen--comments">
+        <div class="first-screen__wrapper"><img class="picture__img first-screen__img" src="./img/bg-comments.jpg" alt="bg-comments"/>
         </div>
+            <div class="container first-screen__container">
+              <div class="first-screen__slider">
+                <div class="first-screen__slide">
+                  <div class="first-screen__title">Отзывы клиентов</div>
+                  <div class="first-screen__advantages">
+                    <div class="first-screen__desc">Наш опыт работы составляет более 9 лет, и за это время мы увеличили прибыль более 30 000 сайтов. Среди наших клиентов как компании из списка Forbes, так и небольшие проекты-стартапы из разных сфер бизнеса, от ecommerce до сложных B2B-услуг. Для каждого из них мы подобрали индивидуальную стратегию продвижения, нацеленную на выполнение бизнес-задач.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
-      <div class="container">
-        <nav class="breadcrumbs breadcrumbs--discount-gift">
-          <li><a class="breadcrumbs__link" href="#">Главная</a>
-            <div class="breadcrumbs__arrow"></div>
-          </li>
-          <li><a class="breadcrumbs__link" href="#">Акции</a>
-            <div class="breadcrumbs__arrow"></div>
-          </li>
-          <li><span class="breadcrumbs__link breadcrumbs__link--span">Месяц продвижения в подарок</span></li>
-        </nav>
+      <div class="title title--comments">
+            <div class="container">
+              <nav class="breadcrumbs">
+                <li><a class="breadcrumbs__link" href="#">Главная</a>
+                  <div class="breadcrumbs__arrow"></div>
+                </li>
+                <li><a class="breadcrumbs__link" href="#">О компании</a>
+                  <div class="breadcrumbs__arrow"></div>
+                </li>
+                <li><span class="breadcrumbs__link breadcrumbs__link--span">Отзывы клиентов</span>
+                </li>
+              </nav>
+              <div class="title__text">Отзывы клиентов</div>
+              <div class="title__tags"><a class="button title__tag title__tag--active" href="#">Все услуги</a><a class="button title__tag" href="#">Финансы</a><a class="button title__tag" href="#">Интернет-магазины</a><a class="button title__tag" href="#">Медицина</a><a class="button title__tag" href="#">Строительство</a><a class="button title__tag" href="#">B2B</a><a class="button title__tag" href="#">СМИ</a><a class="button title__tag" href="#">Другое</a>
+              </div>
+            </div>
       </div>
-      <div class="secton-partners">
-        <div class="container">
-          <h2 class="ci-h2"></h2>
-        </div>
+      <div class="comments">
+            <div class="container comments__container">
+              <div class="comments__comments-item">
+                <div class="comments__brand"><img class="picture__img comments__img" src="./img/comments/stroi-bazik.jpg" alt="stroi-bazik"/>
+                </div>
+                <div class="comments__content">
+                  <div class="comments__title">Строительство</div>
+                  <div class="comments__desc">Специалисты из «АИР ВЕБ» связались со мной сами, предложив бесплатный анализ моей рекламной кампании. На тот момент заказов было меньше, чем хотелось бы. Я занимаюсь продажей пиломатериалов. Расходы на рекламу превышали доходы. Проведя анализ, специалисты предложили запустить рекламу в тестовом режиме на 2 недели. И что удивительно, за эти 2 недели я подписал договоров больше чем за предыдущий месяц. До сих пор мы успешно сотрудничаем. Спасибо!</div>
+                  <div class="comments__wrapper">
+                        <button class="button comments__button"><span></span>
+                          <svg>
+                            <use xlink:href="./svg/sprite.svg#mail"></use>
+                          </svg>
+                        </button>
+                    <div class="comments__sender">
+                      <p>Антон Владимирович</p>
+                      <p>Производственная компания по обработке дерева</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
       </div>
       <div class="feedback">
-        <div class="feedback__wrapper"><img class="picture__img feedback__img" src="./img/bg-macbook.jpg" alt="bg-macbook"></div>
-        <div class="container feedback__container">
-          <div class="form feedback__form">
-            <div class="form__title">Заказать наши услуги</div>
-            <div class="form__subtitle">Подготовим коммерческое предложение в течение 30 минут</div>
-            <form action="/" method="POST">
-              <select class="form__select">
-                <option value="choose">Выберите услугу</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <select class="form__select">
-                <option value="choose">Выберите ваш бюджет</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-              </select>
-              <input class="input" type="text" name="name" placeholder="Фамилия Имя Отчество">
-              <input class="input" type="text" name="phone" placeholder="+7 (___) ___-__-__">
-              <input class="input" type="email" name="email" placeholder="Ваш email">
-              <input class="input" type="text" name="site" placeholder="Адрес сайта">
-              <input class="form__button" type="submit" value="Отправить">
-            </form>
-          </div>
-          <div class="feedback__info">
-            <div class="feedback__title">Если Вы не уверены, какие услуги необходимы для Вашего бизнеса</div>
-            <div class="feedback__desc">Воспользуйтесь <a href="">формой обратного звонка</a>. Мы перезвоним в течении 15 минут и поможем найти наиболе подходящее решение для вашей проблемы</div>
-            <div class="feedback__privacy">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.</div>
-          </div>
+        <div class="feedback__wrapper"><img class="picture__img feedback__img" src="./img/bg-macbook.jpg" alt="bg-macbook"/>
         </div>
+            <div class="container feedback__container">
+              <div class="form feedback__form">
+                <div class="form__title">Заказать наши услуги</div>
+                <div class="form__subtitle">Подготовим коммерческое предложение в течение 30 минут</div>
+                <form action="/" method="POST">
+                  <select class="form__select">
+                    <option value="choose">Выберите услугу</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <select class="form__select">
+                    <option value="choose">Выберите ваш бюджет</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                  </select>
+                  <input class="input" type="text" name="name" placeholder="Фамилия Имя Отчество"/>
+                  <input class="input" type="text" name="phone" placeholder="+7 (___) ___-__-__"/>
+                  <input class="input" type="email" name="email" placeholder="Ваш email"/>
+                  <input class="input" type="text" name="site" placeholder="Адрес сайта"/>
+                  <input class="form__button" type="submit" value="Отправить"/>
+                </form>
+              </div>
+              <div class="feedback__info">
+                <div class="feedback__title">Если Вы не уверены, какие услуги необходимы для Вашего бизнеса</div>
+                <div class="feedback__desc">Воспользуйтесь <a href="#">формой обратного звонка</a>. Мы перезвоним в течении 15 минут и поможем найти наиболе подходящее решение для вашей проблемы</div>
+                <div class="feedback__privacy">Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.</div>
+              </div>
+            </div>
       </div>
       <div class="map">
         <script type="text/javascript" charset="utf-8" async="async" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af28e473c2d02da976a9db0e04fc47ca0770ed4d0d3d34e8a3a8aa82a387dc010&amp;amp;width=100$&amp;amp;height=100%&amp;amp;lang=ru_RU&amp;amp;scroll=false"></script>

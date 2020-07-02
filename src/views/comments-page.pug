@@ -1,0 +1,15 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+include partials/title.pug
+include partials/comments.pug
+
+block vars
+
+block main
+	+first-screen(commentsPage.firstScreen, 'first-screen--comments')
+	+title(commentsPage.title, 'title--comments')
+	+comments(commentsPage.comments)
+	+feedback(commentsPage.feedback)
+	+map()

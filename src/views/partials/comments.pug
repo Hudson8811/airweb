@@ -1,0 +1,19 @@
+include ../components/container.pug
+include ../components/picture
+include ../components/button.pug
+
+mixin comments(data)
+	.comments
+		+container('comments__container')
+			each item in data
+				.comments__comments-item
+					.comments__brand
+						+picture(item.img, 'comments__img')
+					.comments__content
+						.comments__title= item.title
+						.comments__desc!= item.desc
+						.comments__wrapper
+							+button(data.button, 'comments__button', 'mail')
+							.comments__sender
+								p= item.name
+								p= item.position

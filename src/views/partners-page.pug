@@ -1,0 +1,15 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+include partials/title.pug
+include partials/team.pug
+
+block vars
+
+block main
+	+first-screen(partnersPage.firstScreen)
+	+title(partnersPage.title, 'title--team')
+	+team(partnersPage.team)
+	+feedback(partnersPage.feedback)
+	+map()
