@@ -1,0 +1,100 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/catalog/catalog.pug
+include partials/title.pug
+
+block vars
+
+block main
+	.blogitem-page-top-sec
+		.bi-pts-bg
+			img(src='img/discount/DiscountItem_Page.jpg')
+
+		.bi-pts-content.bi-pts-content--discount-item
+			.container
+				h1.bi-pts-title.bi-pts-title--discount-item Месяц продвижения в подарок
+				.bi-pts-text.bi-pts-text--discount-item Экспертный SEO-аудит сайта — выявим все ошибки, которые мешают высокому ранжированию в поисковых системах, корректной технической работе Вашего сайта и увеличению продаж.
+
+				.stock-countdown
+					.stock-countdown-title До конца акции осталось:
+					.stock-countdown-flex(data-time-out="2020-07-28T00:00:00")
+						.stock-countdown-tpart
+							.stock-countdown-tpart__digit.js-stock-countdown-d 02
+							.stock-countdown-tpart__name Дней
+						.stock-countdown-separator :
+						.stock-countdown-tpart
+							.stock-countdown-tpart__digit.js-stock-countdown-h 06
+							.stock-countdown-tpart__name часов
+						.stock-countdown-separator :
+						.stock-countdown-tpart
+							.stock-countdown-tpart__digit.js-stock-countdown-m 28
+							.stock-countdown-tpart__name минут
+						.stock-countdown-separator :
+						.stock-countdown-tpart
+							.stock-countdown-tpart__digit.js-stock-countdown-s 36
+							.stock-countdown-tpart__name секунд
+
+	.discount-gift-section
+		.container
+			nav.breadcrumbs.breadcrumbs--discount-gift
+				li
+					a.breadcrumbs__link(href='#') Главная
+					.breadcrumbs__arrow
+				li
+					a.breadcrumbs__link(href='#') Акции
+					.breadcrumbs__arrow
+				li
+					span.breadcrumbs__link.breadcrumbs__link--span Месяц продвижения в подарок
+
+			.gift-section-flex
+				.gift-section-text
+					h2.gift-section-title Месяц продвижения вашего бизнеса в интернете бесплатно!
+					.gift-section-subtitle Профессиональный подход и высокий уровень
+					p Месяц продвижения в ПОДАРОК: при подключении любой новой абонентской услуги (Управление репутацией (SERM) выше тарифа «Старт», Продвижение в социальных сетях (SMM) выше тарифа «Лайт», Техническую поддержку, Продвижение сайта (SEO) выше тарифа «Эконом») и предоплате первых 3-х месяцев работы, 4-ый месяц Вы получите совершенно БЕСПЛАТНО!
+					p Узнайте подробности у Вашего персонального менеджера
+					a.button.giftsec-request-call(href="") Заказать звонок
+				.gift-section-form__wrap
+					form(action="")
+						h3.gift-section-form__title Получить подарок
+
+						input.input(type='text' name='name' placeholder='Фамилия Имя Отчество')
+						input.input(type='text' name='phone' placeholder='+7 (___) ___-__-__')
+						input.input(type='email' name='email' placeholder='Ваш email')
+
+						input.form__button.gift-section-submit(type='submit' value='Отправить')
+
+
+
+	.feedback
+		.feedback__wrapper
+			img.picture__img.feedback__img(src='./img/bg-macbook.jpg' alt='bg-macbook')
+		.container.feedback__container
+			.form.feedback__form
+				.form__title Заказать наши услуги
+				.form__subtitle Подготовим коммерческое предложение в течение 30 минут
+				form(action='/' method='POST')
+					select.form__select
+						option(value='choose') Выберите услугу
+						option(value='1') 1
+						option(value='2') 2
+						option(value='3') 3
+						option(value='4') 4
+					select.form__select
+						option(value='choose') Выберите ваш бюджет
+						option(value='1') 1
+						option(value='2') 2
+						option(value='3') 3
+						option(value='4') 4
+					input.input(type='text' name='name' placeholder='Фамилия Имя Отчество')
+					input.input(type='text' name='phone' placeholder='+7 (___) ___-__-__')
+					input.input(type='email' name='email' placeholder='Ваш email')
+					input.input(type='text' name='site' placeholder='Адрес сайта')
+					input.form__button(type='submit' value='Отправить')
+			.feedback__info
+
+				.feedback__title Если Вы не уверены, какие услуги необходимы для Вашего бизнеса
+				.feedback__desc Воспользуйтесь #[a(href="") формой обратного звонка]. Мы перезвоним в течении 15 минут и поможем найти наиболе подходящее решение для вашей проблемы
+				.feedback__privacy Нажимая на кнопку «Отправить», вы даете согласие на обработку своих персональных данных.
+
+	+map()
