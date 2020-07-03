@@ -5,7 +5,7 @@ include ../components/button.pug
 mixin comments(data)
 	.comments
 		+container('comments__container')
-			each item in data
+			each item in data.items
 				.comments__comments-item
 					.comments__brand
 						+picture(item.img, 'comments__img')
@@ -17,3 +17,4 @@ mixin comments(data)
 							.comments__sender
 								p= item.name
 								p= item.position
+		+button(data.more, 'button--arrow comments__more')

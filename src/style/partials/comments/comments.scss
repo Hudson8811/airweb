@@ -1,6 +1,7 @@
 .comments {
 	position: relative;
 	background-color: $light-gray;
+	margin-top: 144px;
 
 	&::before,
 	&::after {
@@ -22,36 +23,72 @@
 		background: linear-gradient(to bottom left, $light-gray 50%, $white 50%);
 	}
 
+	&__container {
+		position: relative;
+		top: -100px;
+	}
+
 	&__comments-item {
 		display: flex;
-		padding: 57px 78px 63px 85px;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-between;
+		padding: 20px;
 		background-color: $white;
 		border: 1px solid $gray-e4;
+
+		@media (min-width: $tMin) {
+			padding: 51px 70px 57px 112px;
+		}
+
+		@media (min-width: $dMin) {
+			flex-direction: row;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
 	}
 
 	&__brand {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		max-width: 255px;
+		max-width: 200px;
 		width: 100%;
+		margin-bottom: 40px;
+
+		@media (min-width: $dMin) {
+			margin-right: 120px;
+			margin-bottom: 0;
+		}
 	}
 
 	&__title {
 		font-size: 18px;
 		color: $red;
-		margin-bottom: 15px;
+		margin-bottom: 9px;
 	}
 
 	&__desc {
 		font-size: 15px;
 		line-height: 26px;
-		margin-bottom: 50px;
+		margin-bottom: 24px;
+
+		@media (min-width: $tMin) {
+			margin-bottom: 50px;
+		}
 	}
 
 	&__wrapper {
 		display: flex;
+		flex-direction: column;
+		align-items: center;
 		justify-content: space-between;
+
+		@media (min-width: $tMin) {
+			flex-direction: row;
+		}
 	}
 
 	&__button {
@@ -67,8 +104,14 @@
 	}
 
 	&__sender {
-		text-align: right;
+		text-align: center;
 		color: $gray-tag-dark;
+		margin-top: 15px;
+
+		@media (min-width: $tMin) {
+			text-align: right;
+			margin-top: 0;
+		}
 
 		p {
 			&:first-child {
@@ -79,5 +122,13 @@
 				font-size: 14px;
 			}
 		}
+	}
+
+	&__more {
+		width: 200px;
+		height: 45px;
+		position: relative;
+		top: -70px;
+		margin: 0 auto;
 	}
 }

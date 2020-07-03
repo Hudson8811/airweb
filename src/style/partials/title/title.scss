@@ -87,12 +87,20 @@
 	}
 
 	&--comments {
-		margin-top: 93px;
+		margin-top: 55px;
+
+		@media (min-width: $dMin) {
+			margin-top: 93px;
+		}
 
 		.title {
 			&__text {
-				margin-top: 53px;
+				margin-top: 21px;
 				margin-bottom: 30px;
+
+				@media (min-width: $dMin) {
+					margin-top: 53px;
+				}
 			}
 
 			&__tag {
