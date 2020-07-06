@@ -14,13 +14,14 @@ mixin header(data)
 					each link in data.links
 						li.header__menu-link
 							a(href=link.href)= link.text
-			.header__contacts
-				each contact in data.contacts
-					a.header__contact-link(href=contact.url)
-						picture
-							source(media='(min-width: 1280px)', srcset=`./img/icons/${contact.icon}.png`)
-							img(src=`./img/icons/${contact.icon}-mobile.png`)
-						p= contact.text
+				.header__contacts
+					each contact in data.contacts
+						a.header__contact-link(href=contact.url)
+							picture
+								source(media='(min-width: 1000px)', srcset=`./img/icons/${contact.icon}.png`)
+								img(src=`./img/icons/${contact.icon}-mobile.png`)
+							p= contact.text
+			.header__nav
 				.header__buttons
 					+button(data.button, 'header__callme')
 					a(href=data.send.href)= data.send.text

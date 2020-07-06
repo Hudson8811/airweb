@@ -1,0 +1,30 @@
+include ../../components/container.pug
+include ../../partials/title.pug
+include ../../components/picture.pug
+
+mixin opportunities(data)
+	.opportunities
+		+title(data.title, 'opportunities__title')
+		+container('opportunities__container')
+			.opportunities__wrapper
+				.opportunities__bg
+					+picture(data.img, 'opportunities__img')
+				table.opportunities__table
+					thead
+						tr
+							each th in data.tableData.head
+								th= th
+					tbody
+						each row in data.tableData.rows
+							tr
+								each item, index in row.value
+									td(aria-label=data.tableData.head[index])
+										.opportunities__group
+											if item.check
+												svg
+													use(xlink:href='./svg/sprite.svg#check')
+											if item.uncheck
+												svg
+													use(xlink:href='./svg/sprite.svg#close')
+											if item.text
+												p&attributes(item.size)!= item.text

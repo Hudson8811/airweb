@@ -1,0 +1,20 @@
+include ../../components/container.pug
+include ../../components/picture.pug
+
+mixin program(data)
+	.program
+		+container()
+			.program__desc= data.desc
+			.program__cards
+				each item in data.cards
+					.program__card-item
+						.program__bg(style=`${item.bgColor}`)
+							+picture(item.img, 'program__img')
+						.program__content
+							.program__content-top
+								.program__name= item.name
+								.program__budget Ежемесячный бюджет
+								.program__budget-sum!= item.sum
+							if item.bonus
+								.program__bonus= item.bonus
+			.program__detail!= data.detail

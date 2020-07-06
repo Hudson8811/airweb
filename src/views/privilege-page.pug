@@ -1,0 +1,17 @@
+extends layouts/default.pug
+include partials/map.pug
+include partials/feedback/feedback.pug
+include partials/first-screen.pug
+include partials/title.pug
+include partials/privilege/program.pug
+include partials/privilege/opportunities.pug
+
+block vars
+
+block main
+	+first-screen(privilegePage.firstScreen)
+	+title(privilegePage.title, 'title--team')
+	+program(privilegePage.program)
+	+opportunities(privilegePage.opportunities)
+	+feedback(privilegePage.feedback)
+	+map()
