@@ -1,4 +1,10 @@
 .case {
+	margin-top: 50px;
+
+	@media (min-width: $dMin) {
+		margin-top: 132px;
+	}
+
 	.title {
 		&__text {
 			margin-bottom: 13px;

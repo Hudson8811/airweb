@@ -1,17 +1,29 @@
 .services {
-	padding: 60px 0 120px;
+	padding: 15px 0;
 	background-color: $light-gray;
 	position: relative;
 
-	&::after {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100px;
+	@media (min-width: $dMin) {
+		padding: 60px 0 15px;
+	}
+
+	&__wrapper,
+	&__inner {
 		position: absolute;
-		bottom: 0;
+		top: 0;
 		left: 0;
-		background: linear-gradient(to bottom right, $light-gray 50%, $white 50%);
+		right: 0;
+		height: 100%;
+		transform-origin: top right;
+		background-color: $light-gray;
+	}
+
+	&__wrapper {
+		transform: skew(0, 3deg);
+	}
+
+	&__inner {
+		transform: skew(0, -6deg);
 	}
 
 	&__articles {
@@ -23,13 +35,11 @@
 		@media (min-width: $dMin) {
 			margin-top: 25px;
 		}
-
-		@media (min-width: $d1280) {
-			margin-top: 50px;
-		}
 	}
 
 	&__button {
+		width: 200px;
+		height: 45px;
 		margin: 0 auto;
 	}
 

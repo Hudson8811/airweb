@@ -5,6 +5,8 @@ include ../../components/button.pug
 
 mixin services(data, mod)
 	.services(class=mod)
+		.services__wrapper
+			.services__inner
 		if data.title
 			+title(data.title)
 		+container('services__container')

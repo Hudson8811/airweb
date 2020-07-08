@@ -12,4 +12,4 @@ mixin clients(data)
 					.clients__slide(class=(index > 1 ? 'clients__slide--hide' : ''))
 						.clients__company
 							+picture(slide, 'clients__img')
-			+button('', 'clients__button')
+			+button(data.button, 'clients__button')

@@ -11,8 +11,14 @@
 
 	&__button {
 		height: 45px;
-		padding: 15px 54px 17px 36px;
+		padding: 15px 36px;
 		margin: 5px auto 44px;
+
+		svg {
+			width: 25px;
+			height: 25px;
+			fill: $white;
+		}
 	}
 
 	.article {

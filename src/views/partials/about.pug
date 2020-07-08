@@ -4,6 +4,8 @@ include ../components/picture.pug
 
 mixin about(data)
 	.about
+		.about__wrapper
+			.about__inner
 		+title(data.title)
 		+container('about__container')
 			.about__top

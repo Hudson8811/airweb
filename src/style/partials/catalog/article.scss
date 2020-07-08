@@ -2,10 +2,12 @@
 	width: 100%;
 	position: relative;
 	padding: 30px 25px;
+	margin-bottom: 25px;
 	overflow: hidden;
 	min-height: 239px;
 
 	@media (min-width: $d1280) {
+		margin-bottom: 0;
 		padding: 55px 47px 56px;
 	}
 
@@ -86,7 +88,12 @@
 		font-size: 14px;
 		line-height: 22px;
 		color: $gray-tag-light;
-		margin-left: 20px;
+		margin-top: 10px;
+
+		@media (min-width: $tMin) {
+			margin-left: 20px;
+			margin-top: 0;
+		}
 	}
 
 	&__price {
@@ -116,6 +123,14 @@
 
 		@media (min-width: $d1280) {
 			width: calc(33% - 12px);
+		}
+	}
+
+	&__button {
+		svg {
+			width: 20px;
+			height: 24px;
+			fill: $white;
 		}
 	}
 

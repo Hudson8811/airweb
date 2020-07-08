@@ -544,7 +544,10 @@
 				"name": "na-melnitse",
 				"type": "png"
 			}
-		]
+		],
+		"button": {
+			"text": "Показать все"
+		}
 	},
 	"cooperation": {
 		"title": {

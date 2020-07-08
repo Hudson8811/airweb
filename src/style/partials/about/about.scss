@@ -1,33 +1,37 @@
 .about {
 	position: relative;
 	background-color: $light-gray;
-	padding: 62px 0 120px;
-	margin-top: 52px;
+	margin: 54px 0;
 
-	&::before,
-	&::after {
-		content: '';
-		display: block;
-		width: 100%;
-		height: 100px;
-		position: absolute;
-		left: 0;
-	}
-
-	&::before {
-		top: 0;
-		background: linear-gradient(to top right, $light-gray 50%, $white 50%);
-	}
-
-	&::after {
-		bottom: 0;
-		background: linear-gradient(to bottom right, $light-gray 50%, $white 50%);
+	@media (min-width: $dMin) {
+		margin: 150px 0;
 	}
 
 	.title {
+		position: relative;
+
 		&__text {
 			margin-bottom: 13px;
 		}
+	}
+
+	&__wrapper,
+	&__inner {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		transform-origin: top right;
+		background-color: $light-gray;
+	}
+
+	&__wrapper {
+		transform: skew(0, 3deg);
+	}
+
+	&__inner {
+		transform: skew(0, -6deg);
 	}
 
 	&__container {
@@ -128,6 +132,7 @@
 	}
 
 	&__title {
+		position: relative;
 		font-size: 26px;
 		font-weight: 400;
 		text-transform: uppercase;
