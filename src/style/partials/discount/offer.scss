@@ -135,4 +135,24 @@
 			transform-origin: top left;
 		}
 	}
+
+	&--last {
+		margin-bottom: 3vh;
+
+		@media (min-width: $dMin) {
+			margin-bottom: 4vh;
+		}
+
+		@media (min-width: $d1280) {
+			margin-bottom: 5vh;
+		}
+
+		@media (min-width: 1700px) {
+			margin-bottom: 6vh;
+		}
+
+		.offer__inner {
+			transform: none;
+		}
+	}
 }

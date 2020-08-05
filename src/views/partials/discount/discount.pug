@@ -3,5 +3,10 @@ include offer.pug
 
 mixin discount(data)
 	.discount
-		each item in data.offers
-			+offer(item)
+		each item, index in data.offers
+			if (index === data.offers.length - 1 && item.reverse === true)
+				+offer(item, 'offer--reverse offer--last')
+			else if (item.reverse)
+				+offer(item, 'offer--reverse')
+			else
+				+offer(item)
