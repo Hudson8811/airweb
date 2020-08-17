@@ -82,12 +82,6 @@
 	}
 
 	&--team {
-		margin-top: 53px;
-
-		@media (min-width: $dMin) {
-			margin-top: 93px;
-		}
-
 		.title__text {
 			margin-top: 23px;
 			margin-bottom: 26px;
@@ -100,12 +94,6 @@
 	}
 
 	&--comments {
-		margin-top: 55px;
-
-		@media (min-width: $dMin) {
-			margin-top: 93px;
-		}
-
 		.title {
 			&__text {
 				margin-top: 21px;
