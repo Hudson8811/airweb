@@ -257,6 +257,16 @@
 	}
 
 	&--seo-service {
-		margin-top: 106px;
+		@media (min-width: $tMin) {
+			margin-top: 56px;
+		}
+
+		@media (min-width: $dMin) {
+			margin-top: 115px;
+		}
+
+		@media (min-width: 1920px) {
+			margin-top: 150px;
+		}
 	}
 }

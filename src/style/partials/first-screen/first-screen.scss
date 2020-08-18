@@ -229,10 +229,15 @@
 	&--seo-service {
 		.first-screen {
 			&__container {
-				padding: 100px 0 40px;
+				padding: 100px 0 120px;
+				margin-bottom: -100px;
 
 				@media (min-width: $dMin) {
-					padding: 160px 0 70px;
+					padding: 160px 0 150px;
+				}
+
+				@media (min-width: $d1280) {
+					padding: 160px 0 190px;
 				}
 			}
 			
@@ -251,6 +256,12 @@
 				}
 			}
 
+			&__advantages-col {
+				@media (min-width: $dMin) {
+					justify-content: flex-start;
+				}
+			}
+
 			&__button {
 				font-size: 18px;
 				padding: 26px 12px;
@@ -259,7 +270,7 @@
 
 				@media (min-width: $dMin) {
 					font-size: 24px;
-					padding: 30px 56px;
+					padding: 30px 52px;
 					margin: 0;
 				}
 			}

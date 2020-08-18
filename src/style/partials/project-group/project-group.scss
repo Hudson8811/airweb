@@ -8,12 +8,12 @@
 		height: 50px;
 		position: absolute;
 		left: 0;
-		top: -104px;
+		top: -90px;
 		background: linear-gradient(to top left, $white 50%, transparent 50%);
 
 		@media (min-width: $dMin) {
 			height: 100px;
-			top: -154px;
+			top: -140px;
 		}
 	}
 

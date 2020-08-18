@@ -4,23 +4,26 @@ include ../components/picture.pug
 
 mixin expert(data)
 	.expert
-		+title(data.title)
-		+container()
-			.expert__outer
-				.expert__about
-					.expert__text!= data.text
-					.expert__awards
-						each award in data.awards
-							.expert__award
-								+picture(award, 'expert__img')
-				.expert__rating
-					each item in data.rating
-						.expert__rating-item
-							.expert__rating-item-top
-								.expert__rating-item-num 1
-								.expert__rating-item-wrapper
-									.expert__rating-item-icon
-										svg
-											use(xlink:href='./svg/sprite.svg#crown')
-									.expert__rating-item-place Место
-							.expert__rating-item-text= item
+		.expert__wrapper
+			.expert__inner
+		.expert__content
+			+title(data.title)
+			+container()
+				.expert__outer
+					.expert__about
+						.expert__text!= data.text
+						.expert__awards
+							each award in data.awards
+								.expert__award
+									+picture(award, 'expert__img')
+					.expert__rating
+						each item in data.rating
+							.expert__rating-item
+								.expert__rating-item-top
+									.expert__rating-item-num 1
+									.expert__rating-item-wrapper
+										.expert__rating-item-icon
+											svg
+												use(xlink:href='./svg/sprite.svg#crown')
+										.expert__rating-item-place Место
+								.expert__rating-item-text= item
