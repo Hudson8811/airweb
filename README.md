@@ -21,3 +21,7 @@
 5.1) src/views/components - миксины для ядровых блоков
 5.2) src/views/layouts - шаблоны страниц
 5.3) src/views/partials - разметка для блоков страниц (названия поддиректорий и файлов совпадают с src/style/partials/*dirs*)
+
+
+
+cf22966 / 12345Qwer - таймвеб
