@@ -154,6 +154,11 @@
 		a {
 			color: $gray;
 			border-bottom: 1px solid $gray;
+			transition: border-bottom-color 0.3s ease;
+
+			&:hover {
+				border-bottom-color: transparent;
+			}
 		}
 	}
 
@@ -268,6 +273,10 @@
 		color: $gray;
 		text-decoration: underline;
 		order: -1;
+
+		&:hover {
+			text-decoration: none;
+		}
 
 		@media (min-width: $dMin) {
 			display: block;

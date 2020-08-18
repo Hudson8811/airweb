@@ -62,6 +62,20 @@ $(document).ready(function () {
 			$(this).next().slideToggle(300);
 		});
 	});
+
+	$('.header__callme').click(function () {
+		$.fancybox.open({
+			src: '#callme',
+			touch: false,
+			scrolling: 'no',
+			beforeShow: function(){
+				$("body").css({'overflow-y':'hidden'});
+			},
+			afterClose: function(){
+				$("body").css({'overflow-y':'visible'});
+			}
+		});
+	});
 });
 $(document).ready(function () {
 	$('.footer__expand').click(function () {

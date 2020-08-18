@@ -1,5 +1,6 @@
 include ../components/container.pug
 include ../components/button.pug
+include ../components/input.pug
 
 mixin header(data)
 	header.header
@@ -64,5 +65,14 @@ mixin header(data)
 					each social in data.socials
 						a.header-mobile-nav__socials-icon(href='#')
 							img(src=`./img/icons/${social}.png`)
+
+		#callme.callme(style='display: none;')
+			.callme__title Заказать звонок
+			form.callme__form
+				each input in data.inputs
+					label= input.label
+						+input(input)
+				.callme__agreement Нажимая на кнопку "Отправить", вы даете согласие на обработку <a href='#'>персональных данных</a>
+				+button(data.button, 'callme__submit')
 
 

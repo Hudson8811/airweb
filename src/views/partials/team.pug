@@ -3,8 +3,8 @@ include ../components/picture
 
 mixin team(data)
 	.team
-		each item in data.person
-			.team__person
+		each item, index in data.person
+			.team__person(class=(index === data.person.length - 1 && index % 2 !== 0) ? 'team__person--last':'')
 				+container('team__container')
 					.team__photo
 						+picture(item.img, 'team__img')

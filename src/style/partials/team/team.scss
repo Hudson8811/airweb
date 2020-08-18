@@ -53,6 +53,16 @@
 				display: block;
 			}
 		}
+
+		&--last {
+			&:nth-child(even)::after {
+				@media (min-width: $dMin) {
+					display: block;
+					height: 200px;
+					bottom: -200px;
+				}
+			}
+		}
 	}
 
 	&__container {
