@@ -194,9 +194,47 @@
 	}
 }
 
-.modal-review {
-	.modal-header .title {
+#modalFORM2 {
+	.title {
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+
+	.col-xs-12 + .col-xs-12 {
+		margin-top: 20px;
+	}
+
+	.warning-buy {
+		margin-bottom: 10px;
 		text-align: center;
+
+		a {
+			color: $red;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	input {
+		padding: 12px 16px;
+		box-shadow: none;
+
+		&:focus::placeholder {
+			opacity: 0;
+		}
+	}
+
+	.submit-button {
+		border: 1px solid $red;
+		transition: all 0.3s ease;
+
+		&:hover {
+			background-color: $white;
+			color: $red;
+		}
 	}
 }
 
