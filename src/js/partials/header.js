@@ -16,7 +16,7 @@ $(document).ready(function () {
 		});
 	});
 
-	$('.header__callme').click(function () {
+	/*$('.header__callme').click(function () {
 		$.fancybox.open({
 			src: '#callme',
 			touch: false,
@@ -28,5 +28,5 @@ $(document).ready(function () {
 				$("body").css({'overflow-y':'visible'});
 			}
 		});
-	});
+	});*/
 });

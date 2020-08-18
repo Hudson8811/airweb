@@ -194,7 +194,13 @@
 	}
 }
 
-.callme {
+.modal-review {
+	.modal-header .title {
+		text-align: center;
+	}
+}
+
+/*.callme {
 	position: relative;
 	max-width: 600px;
 	width: 100%;
@@ -253,4 +259,4 @@
 	&__submit {
 		margin: 30px auto 0;
 	}
-}
+}*/
