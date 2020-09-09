@@ -15,6 +15,11 @@ mixin header(data)
 					each link in data.links
 						li.header__menu-link
 							a(href=link.href)= link.text
+							if link.submenu
+								nav.header__submenu-list
+									each sublink in link.submenu
+										li
+											a(href=sublink.href)= sublink.text
 				.header__contacts
 					each contact in data.contacts
 						a.header__contact-link(href=contact.url)

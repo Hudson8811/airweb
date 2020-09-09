@@ -32,26 +32,14 @@
 
 		&:nth-child(5n-2) {
 			background-color: $gray-40;
-
-			@media (min-width: $d1280) {
-				margin: 25px 0;
-			}
 		}
 
 		&:nth-child(5n-1) {
 			background-color: $blue;
-
-			@media (min-width: $d1280) {
-				margin-bottom: 25px;
-			}
 		}
 
 		&:nth-child(5n) {
 			background-color: $gray-e2;
-
-			@media (min-width: $d1280) {
-				margin-bottom: 25px;
-			}
 
 			.article {
 				&__desc,

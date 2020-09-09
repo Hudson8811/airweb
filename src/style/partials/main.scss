@@ -25,7 +25,7 @@ body {
 	flex-grow: 1;
 	margin-top: 71px;
 
-	@media (min-width: $d1280) {
+	@media (min-width: $dMin) {
 		margin-top: 97px;
 	}
 }

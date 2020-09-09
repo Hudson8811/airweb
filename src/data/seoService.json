@@ -650,10 +650,6 @@
 					"type": "email",
 					"name": "email",
 					"placeholder": "Ваш email"
-				},
-				{
-					"name": "site",
-					"placeholder": "Адрес сайта"
 				}
 			],
 			"submit": "Отправить"

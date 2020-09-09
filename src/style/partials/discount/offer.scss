@@ -12,7 +12,7 @@
 	}
 
 	@media (min-width: $d1280) {
-		margin-bottom: -7vh;
+		margin-bottom: -6vh;
 	}
 
 	@media (min-width: 1700px) {
@@ -37,7 +37,8 @@
 	&__inner {
 		transform: skew(0, -6deg);
 
-		&::before {
+		&::before,
+		&::after {
 			content: '';
 			display: block;
 			position: absolute;
@@ -45,8 +46,17 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
+		}
+
+		&::before {
 			background-color: rgba(#0e1013, 0.6);
 			z-index: 1;
+		}
+
+		&::after {
+			background-color: #0e0f1d;
+			background-image: linear-gradient(to top, #491922 0%, #1e2052 100%);
+			opacity: 0.6;
 		}
 	}
 
@@ -116,16 +126,21 @@
 	&__button {
 		font-size: 18px;
 		font-weight: 300;
-		padding: 20px 60px 20px 38px;
+		padding: 0 40px 0 20px;
+		border-radius: 10px;
+		height: 42px;
 
 		@media (min-width: $tMin) {
 			font-size: 20px;
-			padding: 25px 70px 25px 48px;
+			padding: 0 50px 0 25px;
+			height: 52px;
 		}
 
 		@media (min-width: $dMin) {
 			font-size: 24px;
-			padding: 30px 80px 30px 58px;
+			padding: 0 60px 0 30px;
+			width: 270px;
+			height: 62px;
 		}
 	}
 
