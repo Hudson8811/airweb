@@ -2,6 +2,7 @@
 	position: relative;
 	background-color: $light-gray;
 	margin: 54px 0;
+	overflow: hidden;
 
 	@media (min-width: $dMin) {
 		margin: 150px 0;
