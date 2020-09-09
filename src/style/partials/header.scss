@@ -96,6 +96,7 @@
 	    &:hover {
 	        .header__submenu-list {
 	            opacity: 1;
+	            visibility: visible;
 	        }
 	    }
 
@@ -119,6 +120,7 @@
 	    background-color: $light-gray;
 	    border-top: 1px solid $gray;
 	    opacity: 0;
+	    visibility: hidden;
 	    transition: opacity 0.1s linear;
 
 	    li {

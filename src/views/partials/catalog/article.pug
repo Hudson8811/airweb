@@ -12,11 +12,6 @@ mixin article(data)
 			.article__title(style=`color: ${data.textColor};`)= data.title
 			if data.desc
 				.article__desc!= data.desc
-			if data.sublinks
-				nav.article__sublinks
-					each item in data.sublinks
-						li
-							a(href= item.href)!= item.text
 			if data.more
 				.article__more
 					+button(data.more.btn, 'article__button', 'arrow-right')
