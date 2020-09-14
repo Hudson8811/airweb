@@ -104,6 +104,10 @@
 		&:last-child {
 			.cooperation__wrapper {
 				border-bottom: 1px solid $gray-c8;
+
+				@media (min-width: $dMin) {
+					border-bottom: none;
+				}
 			}
 		}
 

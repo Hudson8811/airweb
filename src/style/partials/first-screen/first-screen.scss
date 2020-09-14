@@ -226,6 +226,14 @@
 		margin-left: 127px;
 	}
 
+	&--main {
+		margin-top: -71px;
+
+		@media (min-width: $dMin) {
+			margin-top: 0;
+		}
+	}
+
 	&--seo-service {
 		.first-screen {
 			&__container {
@@ -278,6 +286,12 @@
 	}
 
 	&--history {
+		margin-top: -71px;
+
+		@media (min-width: $dMin) {
+			margin-top: 0;
+		}
+
 		.first-screen {
 			&__img {
 				object-position: bottom;
