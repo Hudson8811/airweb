@@ -20,6 +20,15 @@ mixin header(data)
 									each sublink in link.submenu
 										li
 											a(href=sublink.href)= sublink.text
+											if sublink.secondSubmenu
+												svg
+													use(xlink:href='./svg/sprite.svg#arrow-right')
+												nav.header__second-submenu-list
+													each group in sublink.secondSubmenu
+														.header__link-group
+															each sublink2 in group
+																li
+																	a(href=sublink2.href, class=(sublink2.titleLink) ? 'bold' : '')= sublink2.text
 				.header__contacts
 					each contact in data.contacts
 						a.header__contact-link(href=contact.url)
@@ -50,17 +59,34 @@ mixin header(data)
 				each link in data.links
 					li.header-mobile-nav__menu-item
 						if link.submenu
-							.header-mobile-nav__menu-item-text= link.text
-						else
-							a(href=link.href)= link.text
-						if link.submenu
-							.header-mobile-nav__show-btn
-								.header-mobile-nav__show-btn-wrapper
-									span.header-mobile-nav__arrow
+							.header-mobile-nav__row
+								a(href=link.href).header-mobile-nav__menu-item-text= link.text
+								.header-mobile-nav__show-btn
+									.header-mobile-nav__show-btn-wrapper
+										span.header-mobile-nav__arrow
 							nav.header-mobile-nav__submenu-list
 								each sublink in link.submenu
 									li.header-mobile-nav__submenu-item
 										a(href=sublink.href)= sublink.text
+										if sublink.secondSubmenu
+											.header-mobile-nav__next-menu
+												svg
+													use(xlink:href='./svg/sprite.svg#arrow-right')
+											nav.header-mobile-nav__second-submenu-list
+												li.header-mobile-nav__back
+													a
+														.header-mobile-nav__prev-menu
+															svg
+																use(xlink:href='./svg/sprite.svg#arrow-right')
+														span Назад
+												.header-mobile-nav__link-group-wrap
+													each group in sublink.secondSubmenu
+														.header-mobile-nav__link-group
+															each sublink2 in group
+																li
+																	a(href=sublink2.href, class=(sublink2.titleLink) ? 'bold' : '')= sublink2.text
+						else
+							a(href=link.href)= link.text
 			.header-mobile-nav__bottom
 				a.header-mobile-nav__contact-link(href='tel:+74952150365')
 					.header-mobile-nav__icon-wrapper.header-mobile-nav__icon-wrapper--big
