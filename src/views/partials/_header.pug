@@ -87,15 +87,15 @@ mixin header(data)
 																	a(href=sublink2.href, class=(sublink2.titleLink) ? 'bold' : '')= sublink2.text
 						else
 							a(href=link.href)= link.text
-			.header-mobile-nav__bottom
-				a.header-mobile-nav__contact-link(href='tel:+74952150365')
-					.header-mobile-nav__icon-wrapper.header-mobile-nav__icon-wrapper--big
-						img(src='./img/icons/phone.png')
-					p 8 (495) 215-03-65
-				.header-mobile-nav__socials
-					each social in data.socials
-						a.header-mobile-nav__socials-icon(href='#')
-							img(src=`./img/icons/${social}.png`)
+				.header-mobile-nav__bottom
+					a.header-mobile-nav__contact-link(href='tel:+74952150365')
+						.header-mobile-nav__icon-wrapper.header-mobile-nav__icon-wrapper--big
+							img(src='./img/icons/phone.png')
+						p 8 (495) 215-03-65
+					.header-mobile-nav__socials
+						each social in data.socials
+							a.header-mobile-nav__socials-icon(href='#')
+								img(src=`./img/icons/${social}.png`)
 
 		//#callme.callme(style='display: none;')
 			.callme__title Заказать звонок

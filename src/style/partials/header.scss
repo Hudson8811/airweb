@@ -361,6 +361,8 @@
 	transform: translateX(100%);
 	opacity: 0;
 	transition: transform 0.3s ease, opacity 0.3s ease;
+	overflow-y: auto;
+	overflow-x: hidden;
 
 	&__top {
 		display: flex;
