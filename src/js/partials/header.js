@@ -25,6 +25,8 @@ $(document).ready(function () {
 	});
 	
 	$('.header-mobile-nav__next-menu').click(function () {
+		$('.header-mobile-nav__second-submenu-list').hide();
+		$(this).next().show();
 		menuList.addClass('move-submenu set-opacity');
 	});
 
