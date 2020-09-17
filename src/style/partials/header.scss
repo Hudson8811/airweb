@@ -175,7 +175,8 @@
 	        }
 
 	        svg {
-                width: 25px;
+                max-width: 25px;
+                width: 100%;
                 height: 25px;
 	            fill: $gray-ca;
 	            margin-right: 13px;
@@ -189,6 +190,7 @@
 	    flex-wrap: wrap;
 	    flex-direction: row;
 	    min-width: 540px;
+	    min-height: 100%;
 	    padding: 15px;
 	    position: absolute;
 	    top: 0;
