@@ -29,11 +29,14 @@
 	&__articles {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
 		margin-top: 20px;
 
+		@media (min-width: $dMin) and (max-width: 1279px) {
+			justify-content: space-between;
+		}
+
 		@media (min-width: $dMin) {
-			margin-top: 25px;
+			margin: 25px -12.5px 0;
 		}
 	}
 
