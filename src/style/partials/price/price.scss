@@ -14,6 +14,11 @@
 		height: 100%;
 		background-color: #121418;
 		z-index: -1;
+
+		transform: skew(0,-3deg);
+		transform-origin: top left;
+		-webkit-backface-visibility: hidden;
+		outline: 1px solid transparent;
 	}
 
 	&__img {

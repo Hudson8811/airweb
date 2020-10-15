@@ -240,14 +240,14 @@
 	],
 	"contacts": [
 		{
-			"icon": "mail",
-			"url": "mailto:info@agency-air.ru",
-			"text": "info@agency-air.ru"
-		},
-		{
 			"icon": "phone",
 			"url": "tel:+74952150365",
 			"text": "8 (495) 215-03-65"
+		},
+		{
+			"icon": "mail",
+			"url": "mailto:info@agency-air.ru",
+			"text": "info@agency-air.ru"
 		}
 	],
 	"button": {

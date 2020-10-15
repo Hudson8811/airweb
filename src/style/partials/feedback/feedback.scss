@@ -10,6 +10,8 @@
 		height: 100%;
 		transform: skew(0, 3deg);
 		transform-origin: top left;
+		-webkit-backface-visibility: hidden;
+		outline: 1px solid transparent;
 
 		&::before {
 			content: '';

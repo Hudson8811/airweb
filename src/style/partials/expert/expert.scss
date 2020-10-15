@@ -16,10 +16,14 @@
 
 	&__wrapper {
 		transform: skew(0, 3deg);
+		-webkit-backface-visibility: hidden;
+		outline: 1px solid transparent;
 	}
 
 	&__inner {
 		transform: skew(0, -6deg);
+		-webkit-backface-visibility: hidden;
+		outline: 1px solid transparent;
 	}
 
 	&__content {
