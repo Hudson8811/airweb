@@ -153,7 +153,15 @@
 		.offer__inner {
 			transform-origin: top left;
 		}
+		&:last-child{
+			margin-bottom: 15px;
+			.offer__inner {
+				-webkit-transform: skew(0);
+				transform: skew(0);
+			}
+		}
 	}
+
 
 	&--last {
 		margin-bottom: 3vh;
