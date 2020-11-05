@@ -42,24 +42,22 @@
 	&__logo {
 		@media (min-width: $dMin) {
 			position: absolute;
-			top: 11px;
+			top: 25px;
 			left: 22px;
 		}
 
-		svg {
+		svg, img {
 			&:first-child {
 				display: none;
 
 				@media (min-width: $dMin) {
 					display: block;
 					width: 184px;
-					height: 70px;
 				}
 			}
 
 			&:last-child {
 				width: 117px;
-				height: 35px;
 
 				@media (min-width: $dMin) {
 					display: none;
