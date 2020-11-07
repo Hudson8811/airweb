@@ -24,11 +24,4 @@
 
 
 
-cf22966 / 12345Qwer - таймвеб
 
-admin
-200820092010
-
-cf22966.tmweb.ru
-cf22966_hudson
-741963Hudson
